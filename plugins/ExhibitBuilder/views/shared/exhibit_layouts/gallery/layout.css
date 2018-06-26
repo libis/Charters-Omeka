@@ -1,0 +1,12 @@
+
+.layout-gallery .captions-center .exhibit-item-caption {
+    text-align: center;
+}
+
+.layout-gallery .captions-left .exhibit-item-caption {
+    text-align: left;
+}
+
+.layout-gallery .captions-right .exhibit-item-caption {
+    text-align: right;
+}
