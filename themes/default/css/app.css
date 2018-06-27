@@ -2895,6 +2895,10 @@ section.news .spotlight .more-news a:hover {
   margin: 0 auto;
 }
 
+.item-section .image-section .image a:hover {
+  background: none;
+}
+
 .item-section .image-section .image img {
   max-width: 800px;
 }
@@ -2918,8 +2922,8 @@ section.news .spotlight .more-news a:hover {
 }
 
 .item-section .metadata-title-section {
-  padding: 3rem 0;
-  background: #f6f6f6;
+  padding: 3rem 0 0 0;
+  background: white;
 }
 
 .item-section .metadata-title-section h1 {
@@ -2947,7 +2951,14 @@ section.news .spotlight .more-news a:hover {
 }
 
 .item-section .metadata-section {
-  padding: 3rem 0;
+  padding: 2rem 0 3rem 0;
+}
+
+.item-section .metadata-section .metadata-bg {
+  padding: 2rem;
+  background: rgba(13, 85, 161, 0.05);
+  margin-bottom: 2rem;
+  max-width: 800px;
 }
 
 .item-section .metadata-section .element {
@@ -2969,14 +2980,14 @@ section.news .spotlight .more-news a:hover {
   font-family: "Lato", sans-serif;
   margin-bottom: 0.5rem;
   line-height: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #666;
 }
 
 @media (min-width: 992px) {
   .item-section .metadata-section .element h3 {
-    width: 200px;
+    width: 170px;
     margin-right: 1rem;
     flex: none;
   }
@@ -2986,18 +2997,18 @@ section.news .spotlight .more-news a:hover {
   text-transform: lowercase;
 }
 
-.item-section .metadata-section .element .text {
+.item-section .metadata-section .element .element-text {
   color: rgba(36, 36, 36, 0.9);
   font-family: "Libre Baskerville", serif;
   line-height: 1.5rem;
   font-size: 0.9rem;
 }
 
-.item-section .metadata-section .element .text a {
+.item-section .metadata-section .element .element-text a {
   border-bottom: 1px solid #0d55a1;
 }
 
-.item-section .metadata-section .element .text a:hover {
+.item-section .metadata-section .element .element-text a:hover {
   color: rgba(36, 36, 36, 0.9);
 }
 
