@@ -45,7 +45,7 @@
             <!-- Results. -->
             <!-- Number found. -->
             <h1 id="num-found">
-                <?php echo $results->response->numFound; ?> results
+                <?php echo __("Search the collection");?> (<?php echo $results->response->numFound; ?>)
             </h1>
             <div class="solr-section-applied">
                 <!-- Applied facets. -->

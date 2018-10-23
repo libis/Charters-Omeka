@@ -1,45 +1,135 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'item show')); ?>
-<?php $type = metadata('item','item_type_name');?>
-<?php $metadata = all_element_texts('item',array("return_type"=>"array"));?>
+
 <section class="item-section">
-  <section class="image-section">
-    <div class='container'>
-        <?php if (metadata('item', 'has files') && $type != 'News'): ?>
-            <div class="image-col">
-              <div id="itemfiles">
-                  <div class="element-text"><?php echo item_image_gallery(array('linkWrapper' => array('wrapper' => null,'class' => 'image  lightgallery')),'fullsize'); ?></div>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12  col-lg-7 col-xl-8 image-row">
+
+          <div id="lightgallery">
+            <?php
+              $files = get_current_record('item')->getFiles();
+              foreach($files as $file):
+            ?>
+                <a href="<?php echo $file->getWebPath('fullsize');?>">
+                    <img src="<?php echo $file->getWebPath('fullsize');?>" />
+                </a>
+            <?php endforeach;?>
+          </div>
+        </div>
+        <div class="col-md-12 col-lg-5 col-xl-4">
+          <?php $texts =  all_element_texts('item',array('return_type'=>'array'));?>
+            <div class='metadata'>
+              <h1 class="">
+                  <?php echo strip_tags(metadata('item', array('Dublin Core', 'Title'))); ?>
+              </h1>
+
+              <?php if (isset($texts['Dublin Core']['Subject'])): ?>
+              <div class="element">
+                  <h3><?php echo __('Subject'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Subject']); ?></p></div>
               </div>
-            </div>
-        <?php endif;?>
+              <?php endif; ?>
 
-        <?php if (metadata('item', 'has files') && $type == 'News'): ?>
-            <div id="itemfiles">
-                <div class="element-text"><?php echo item_image_gallery(array('linkWrapper' => array('wrapper' => null,'class' => 'col-sm-2 col-xs-12 image')),'thumbnail'); ?></div>
-            </div>
-        <?php endif; ?>
-    </div>
-    <a class="btn-metadata" href="#metadata">i</a>
-  </section>
+              <?php if (isset($texts['Dublin Core']['Description'])): ?>
+              <div class="element">
+                  <h3><?php echo __('Description'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Description']);?></p></div>
+              </div>
+              <?php endif; ?>
 
-  <?php if ($type != 'News'):?>
-    <section class="metadata-title-section">
-      <div class='container'>
-        <h2><span><?php echo $type;?></span></h2>
-        <h1 class="section-title projecten-title"><span><?php echo metadata('item', array('Dublin Core', 'Title')); ?></span></h1>
-        <?php if(isset($metadata['Dublin Core']["Description"])):?>
-          <div class="description"><?php echo implode(", ",$metadata['Dublin Core']["Description"]);?></div>
-        <?php endif;?>
-      </div>
-    </section>
-  <?php endif;?>
-  <section id="metadata" class="metadata-section">
-    <div class='container'>
-      <div class="metadata-bg">
-            <?php echo all_element_texts('item', array('return_type'=>'html','show_element_sets' => array('Dublin Core'))); ?>
-        
-      </div>
-      <br>
-      <?php echo get_specific_plugin_hook_output('SocialBookmarking', 'public_items_show', array('view' => $this, 'item' => $item)); ?>
+              <?php if (isset($texts['Dublin Core']['Source'])): ?>
+              <div class="element">
+                  <h3><?php echo 'Collectie'; ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Source']); ?></p></div>
+              </div>
+              <?php endif; ?>
+
+              <?php if (isset($texts['Dublin Core']['Creator'])): ?>
+              <div class="element">
+                  <h3><?php echo __('Creator'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Creator']); ?></p></div>
+              </div>
+              <?php endif; ?>
+
+              <?php if (isset($texts['Dublin Core']['Date'])): ?>
+              <div class="element">
+                  <h3><?php echo __('Date'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Date']); ?></p></div>
+              </div>
+              <?php endif; ?>
+
+              <?php if (isset($texts['Dublin Core']['Publisher'])): ?>
+              <div class="element">
+                  <h3><?php echo __('Publisher'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Publisher']); ?></p></div>
+              </div>
+              <?php endif; ?>
+
+              <?php if (isset($texts['Dublin Core']['Coverage'])): ?>
+              <div class="element">
+                  <h3><?php echo 'Plaats'; ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Coverage']); ?></p></div>
+              </div>
+              <?php endif; ?>
+
+              <!-- The following prints a list of all tags associated with the item -->
+              <?php if (metadata('item', 'has tags')): ?>
+              <div class="tags">
+                  <h3><?php echo __('Tags'); ?></h3>
+                  <div class="element-text"><?php echo solr_tag_string(); ?></div>
+              </div>
+              <?php endif;?>
+
+              <br>
+
+              <?php if (isset($texts['Object Item Type Metadata']['IE nummer'])): ?>
+              <div class="element">
+                  <i class="material-icons">&#xE3B6;</i><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Object Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
+              </div>
+              <?php endif; ?>
+
+              <?php echo libis_link_to_related_exhibits($item);?>
+            </div>
+        </div>
     </div>
-  </section>
+  </div>
+</section>
+<script>
+    //image control
+    var divs = jQuery('div[id^="map-"]').hide(),
+
+    N = divs.length,
+    C = 0;
+
+    if(N > 1){
+      jQuery("#prev").fadeIn();
+      jQuery("#next").fadeIn();
+    }
+
+    divs.hide().eq( C ).show();
+
+    jQuery("#next, #prev").click(function(){
+        jQuery("#prev").hide();
+        jQuery("#next").hide();
+
+        divs.stop().hide().fadeOut(1000).eq( (this.id=='next'? ++C : --C) %N ).fadeIn(800);
+        jQuery("#prev").delay( 800 ).fadeIn();
+        jQuery("#next").delay( 800 ).fadeIn();
+    });
+
+    jQuery('#lightgallery').slick({
+      dots: false,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      infinite: false
+    });
+
+    jQuery("#lightgallery").lightGallery(
+      {
+        selector:'a'
+      }
+    );
+</script>
+
 <?php echo foot(); ?>

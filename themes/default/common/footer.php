@@ -23,10 +23,15 @@
             <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
         </div>
     </footer><!-- end footer -->
+
+  </main>
 </body>
 <script>
 jQuery(".toggle").on("click", function() {
-  jQuery(".toggle").parent().toggleClass('active');
+  jQuery(".modal").toggleClass('active');
+});
+jQuery(".search-toggle").on("click", function() {
+  jQuery(".modal-search").toggleClass('active');
 });
 jQuery(document).ready(function() {
     jQuery(".lightgallery").lightGallery();
@@ -43,6 +48,22 @@ jQuery(document).ready(function(){
       }, 900, 'swing', function () {
           window.location.hash = target;
       });
+  });
+
+  jQuery('button.close').click(function() {
+    jQuery('#page-slide').toggleClass('slide');
+  });
+
+  jQuery('button#toggle').click(function() {
+    jQuery('#page-slide').toggleClass('slide');
+    jQuery('#toggle').toggleClass('slide-tog');
+  });
+
+  jQuery('#lang-switcher').find('.ui-dropdown-list-trigger').each(function() {
+    jQuery(this).click(function(){
+      jQuery(this).parent().toggleClass('active');
+    });
+
   });
 });
 

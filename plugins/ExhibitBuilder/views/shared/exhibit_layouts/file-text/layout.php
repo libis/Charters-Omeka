@@ -12,23 +12,23 @@ $captionPosition = isset($options['captions-position'])
 <div class="captions-<?php echo $captionPosition; ?>">
 <div class="row ">
 <?php if($position == "left"):?>
-  <div class="col-12 col-md-5 lightgallery">
+  <div class="col-12 col-md-4 lightgallery">
         <?php foreach ($attachments as $attachment): ?>
             <?php echo $this->exhibitAttachment($attachment, array('imageSize' => $size)); ?>
         <?php endforeach; ?>
   </div>
-  <div class="col-12 col-md-7">
+  <div class="col-12 col-md-8">
     <div class="text">
       <?php echo $text; ?>
     </div>
   </div>
 <?php else: ?>
-  <div class="col-12 col-md-7">
+  <div class="col-12 col-md-8">
     <div class="text">
       <?php echo $text; ?>
     </div>
   </div>
-  <div class="col-12 col-md-5 lightgallery">
+  <div class="col-12 col-md-4 lightgallery">
         <?php foreach ($attachments as $attachment): ?>
             <?php echo $this->exhibitAttachment($attachment, array('imageSize' => $size)); ?>
         <?php endforeach; ?>

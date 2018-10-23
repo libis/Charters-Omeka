@@ -1,35 +1,83 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-<div class="jumbotron">
-    <div class="container">
+<section class="hero-section">
+  <div class="jumbotron">
+      <div class="container">
         <div class="row">
-            <div class="col-md-8 offset-lg-1 col-lg-5">
-              <div class="intro">
-                <?php echo libis_get_simple_page_content("homepage-info");?>
-
-                <p class="more"><a href="<?php echo url("about");?>">Learn more</a><a href="<?php echo url("/solr-search");?>">Visit the collection</a></p>
+              <div class="col-sm-12 offset-md-4 col-md-8 offset-lg-5 col-lg-6">
+                <div class="intro">
+                  <?php echo libis_get_simple_page_content("homepage-info");?>
+                    <!--<p class="more"><a href="<?php echo url("about");?>">Learn more</a><a href="<?php echo url("/solr-search");?>">Visit the collection</a></p>-->
+                </div>
+                <div class="logos">
+                    <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
+                    <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
+                </div>
               </div>
-            </div>
         </div>
-    </div>
-</div>
+      </div>
+  </div>
+</section>
 <section class="carousel-section">
     <div class='container'>
-      <h2>Collection Leuven <a href="<?php echo url("solr-search?q=&facet=collection:&quot;Leuven&quot;");?>">view all</a></h2>
-    </div>
-    <div class='container'>
+      <div class='carousel'>
+      <h2>Verhalen</h2>
       <div class="owl-carousel">
-        <?php $records = get_records('Item',array("collection"=>"2",'sort_field' => 'added', 'sort_dir' => 'd'),10);?>
+        <?php $records = get_records('Exhibit',array('sort_field' => 'added', 'sort_dir' => 'd'),10);?>
         <?php foreach($records as $record):?>
-          <?php $file = $record->getFile();?>
           <div class="item">
-            <img src="<?php echo $file->getWebPath("thumbnail");?>"/>
+            <?php
+              $file = get_record_by_id('File',$record->cover_image_file_id);
+            ?>
+            <img src="<?php echo $file->getWebPath("square_thumbnail");?>"/>
             <div class="inner">
-              <a href="<?php echo record_url($record);?>"><?php echo metadata($record, array('Dublin Core', 'Title'));?></a>
+              <a href="<?php echo record_url($record);?>"><?php echo metadata($record, 'Title');?></a>
+              <p class="credits"><?php echo metadata($record, 'Credits');?></p>
+            </div>
+            <div class="tags fadeInRight">
+              <?php
+              $tags = get_db()->getTable('Tag')->findBy(array('record'=>$record));
+              foreach ($tags as $tag) {
+                  echo '<span><a href="' . html_escape(url('exhibit/browse', array('tags' => $tag->name))) . '" rel="tag">' . html_escape($tag->name) . '</a></span>';
+                  }
+              ?>
             </div>
             </a>
           </div>
         <?php endforeach;?>
+
+      </div>
+      <div class="view-all">
+        <a href="<?php echo url("exhibits/browse");?>"><?php echo __('Browse all exhibits');?></a>
+      </div>
     </div>
+  </div>
+</section>
+<section class="timeline-section">
+  <div class="container">
+    <!--<h2>Timeline</h2>-->
+    <div class="timeline-teaser">
+    <div class="row">
+      <!-- spotlight -->
+      <div class="col-12 col-md-12">
+
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="teaser-text">
+          <h2>Timeline</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor nunc, fringilla eu orci at, dictum viverra neque.</p>
+          <p>Phasellus elit velit, ullamcorper a vehicula ac, hendrerit in urna.</p>
+        </div>
+
+      </div>
+      <div class="col-md-7 timeline-link">
+        <a href="<?php echo url("timelines/show/1");?>">Visit the timeline<i class="material-icons">
+keyboard_arrow_right
+</i></a>
+      </div>
+    </div>
+
+  </div>
   </div>
 </section>
 
@@ -38,68 +86,31 @@
       <h2>Spotlight & news</h2>
       <div class="row">
         <!-- spotlight -->
-        <div class="col-md-3 news-home ">
-          <div class="spotlight">
-              <?php $spotlights = get_records('Item',array("featured"=>"1",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
+        <div class="col-md-9">
+          <div class="row">
+          <?php $spotlights = get_records('Item',array("featured"=>"1",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
 
-              <?php foreach($spotlights as $record):?>
-                <a href="<?php echo record_url($record);?>">
-                  <?php $file = $record->getFile();?>
-                  <div class="img-top" style="background-image: url(<?php echo $file->getWebPath("fullsize"); ?>)"></div>
-                  <div class="news-item item">
-                    <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
-                    <p class="description">
-                      <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 200));?>
-                    </p>
-                  </div>
-                </a>
-              <?php endforeach;?>
-            </div>
-        </div>
-
-        <div class="col-md-3 news-home ">
-          <div class="spotlight">
-              <?php $spotlights = get_records('Item',array("featured"=>"1",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
-
-              <?php foreach($spotlights as $record):?>
-                <a href="<?php echo record_url($record);?>">
-                  <?php $file = $record->getFile();?>
-                  <div class="img-top" style="background-image: url(<?php echo $file->getWebPath("fullsize"); ?>)"></div>
-                  <div class="news-item item">
-                    <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
-                    <p class="description">
-                      <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 200));?>
-                    </p>
-                  </div>
-                </a>
-              <?php endforeach;?>
-            </div>
-        </div>
-
-        <div class="col-md-3 news-home ">
-          <div class="spotlight">
-              <?php $spotlights = get_records('Item',array("featured"=>"1",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
-
-              <?php foreach($spotlights as $record):?>
-                <a href="<?php echo record_url($record);?>">
-                  <?php $file = $record->getFile();?>
-                  <div class="img-top" style="background-image: url(<?php echo $file->getWebPath("fullsize"); ?>)"></div>
-                  <div class="news-item item">
-                    <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
-                    <p class="description">
-                      <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 200));?>
-                    </p>
-                  </div>
-                </a>
-              <?php endforeach;?>
-
-              <div class="more-news">
-                    <a href="<?php echo url("solr-search");?>">Explore collections</a>
+            <?php foreach($spotlights as $record):?>
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 news-home ">
+                <div class="spotlight">
+                  <a href="<?php echo record_url($record);?>">
+                    <?php $file = $record->getFile();?>
+                    <div class="img-top" style="background-image: url(<?php echo $file->getWebPath("fullsize"); ?>)"></div>
+                    <div class="news-item item">
+                      <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
+                      <p class="description">
+                        <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 150));?>
+                      </p>
+                    </div>
+                  </a>
+                </div>
               </div>
-            </div>
+            <?php endforeach;?>
+          </div>
+          <div class="more-news">
+                <a href="<?php echo url("solr-search");?>">Explore collections</a>
+          </div>
         </div>
-
-
 
         <div class="col-md-3">
           <div class="spotlight">
