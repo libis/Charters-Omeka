@@ -42,9 +42,7 @@
                 <div class="right">
                   <div id="lang-switcher" class="ui-dropdown-list">
                       <?php
-                        $languages = array('en'=> 'EN','nl' => 'NL','fr' => 'FR',
-                        'de' => 'DE'
-                        );
+                        $languages = array('en'=> 'EN','nl' => 'NL');
                         $path = url();
                       ?>
 

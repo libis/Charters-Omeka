@@ -57,10 +57,6 @@
     <!--<h2>Timeline</h2>-->
     <div class="timeline-teaser">
     <div class="row">
-      <!-- spotlight -->
-      <div class="col-12 col-md-12">
-
-      </div>
       <div class="col-12 col-md-6">
         <div class="teaser-text">
           <h2>Timeline</h2>
@@ -71,7 +67,7 @@
 
       </div>
       <div class="col-md-7 timeline-link">
-        <a href="<?php echo url("timelines/show/1");?>">Visit the timeline<i class="material-icons">
+        <a href="<?php echo url("neatline-time/timelines/show/1");?>">Visit the timeline<i class="material-icons">
 keyboard_arrow_right
 </i></a>
       </div>
