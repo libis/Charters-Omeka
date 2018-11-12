@@ -3,16 +3,15 @@
   <div class="jumbotron">
       <div class="container">
         <div class="row">
-              <div class="col-sm-12 offset-md-4 col-md-8 offset-lg-5 col-lg-6">
-                <div class="intro">
-                  <?php echo libis_get_simple_page_content("homepage-info");?>
-                    <!--<p class="more"><a href="<?php echo url("about");?>">Learn more</a><a href="<?php echo url("/solr-search");?>">Visit the collection</a></p>-->
-                </div>
-                <div class="logos">
-                    <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
-                    <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
-                </div>
-              </div>
+          <div class="col-sm-12 offset-md-4 col-md-8 offset-lg-5 col-lg-6">
+            <div class="intro">
+              <?php echo libis_get_simple_page_content("homepage-info");?>
+            </div>
+            <div class="logos">
+              <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
+              <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
+            </div>
+          </div>
         </div>
       </div>
   </div>
@@ -25,9 +24,7 @@
         <?php $records = get_records('Exhibit',array('sort_field' => 'added', 'sort_dir' => 'd'),10);?>
         <?php foreach($records as $record):?>
           <div class="item">
-            <?php
-              $file = get_record_by_id('File',$record->cover_image_file_id);
-            ?>
+            <?php $file = get_record_by_id('File',$record->cover_image_file_id);?>
             <img src="<?php echo $file->getWebPath("square_thumbnail");?>"/>
             <div class="inner">
               <a href="<?php echo record_url($record);?>"><?php echo metadata($record, 'Title');?></a>
@@ -35,16 +32,14 @@
             </div>
             <div class="tags fadeInRight">
               <?php
-              $tags = get_db()->getTable('Tag')->findBy(array('record'=>$record));
-              foreach ($tags as $tag) {
+                $tags = get_db()->getTable('Tag')->findBy(array('record'=>$record));
+                foreach ($tags as $tag) {
                   echo '<span><a href="' . html_escape(url('exhibit/browse', array('tags' => $tag->name))) . '" rel="tag">' . html_escape($tag->name) . '</a></span>';
-                  }
+                }
               ?>
             </div>
-            </a>
           </div>
         <?php endforeach;?>
-
       </div>
       <div class="view-all">
         <a href="<?php echo url("exhibits/browse");?>"><?php echo __('Browse all stories');?></a>
@@ -72,7 +67,6 @@
   </div>
   </div>
 </section>
-
 <section class="news">
   <div class="container">
       <h2><?php echo __('Spotlight & news');?></h2>
@@ -102,7 +96,6 @@
                 <a href="<?php echo url("solr-search");?>"><?php echo __('Explore collection');?></a>
           </div>
         </div>
-
         <div class="col-md-3">
           <div class="spotlight">
             <?php $news = get_records('Item',array("type"=>"News",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
