@@ -1,0 +1,194 @@
+# Translation for the Simple Pages plugin for Omeka.
+# Copyright (C) 2011 Roy Rosenzweig Center for History and New Media
+# This file is distributed under the same license as the Omeka package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: UBtheme\n"
+"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-SimplePages/issues\n"
+"POT-Creation-Date: 2018-10-25 15:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+
+#: common/footer.php:17
+msgid "Contact"
+msgstr ""
+
+#: common/footer.php:18
+msgid "Collection holders & partners"
+msgstr ""
+
+#: common/footer.php:19
+msgid "Copyright"
+msgstr ""
+
+#: common/footer.php:20
+msgid "About the website"
+msgstr ""
+
+#: common/footer.php:21
+msgid "KU Leuven Libraries"
+msgstr ""
+
+#: common/footer.php:31
+msgid "Website by"
+msgstr ""
+
+#: common/header.php:91
+msgid "Search..."
+msgstr ""
+
+#: common/header.php:105
+msgid "Search tips"
+msgstr ""
+
+msgid "Grasduin in de hier tentoongestelde werken. Om alle werken te zien, kun je het zoekveld leeg laten en meteen op ‘zoeken’ klikken."
+msgstr ""
+
+#: exhibit-builder/exhibits/browse.php:53
+msgid "Filter: "
+msgstr ""
+
+#: exhibit-builder/exhibits/browse.php:56
+msgid "All"
+msgstr ""
+
+#: exhibit-builder/exhibits/browse.php:93
+msgid "read more"
+msgstr ""
+
+#: exhibit-builder/exhibits/summary.php:38
+msgid "Intro"
+msgstr ""
+
+#: functions.php:40
+msgid "By:"
+msgstr ""
+
+#: functions.php:90
+msgid "Is part of"
+msgstr ""
+
+#: index.php:9
+msgid "EXPO collection"
+msgstr ""
+
+#: index.php:15
+msgid "Search the website"
+msgstr ""
+
+#: index.php:17 solr-search/results/index.php:17
+msgid "search"
+msgstr ""
+
+#: index.php:36
+msgid "Virtual exhibits"
+msgstr ""
+
+#: index.php:39
+msgid "Curatoren putten uit de rijke collecties van KU Leuven Bibliotheken en nemen je mee in hun geschiedenis. Ontdek onze online exposities."
+msgstr "Curatoren putten uit de rijke collecties van KU Leuven Bibliotheken en nemen je mee in hun geschiedenis. Ontdek onze online exposities."
+
+#: index.php:42
+msgid "Visit the exhibits"
+msgstr ""
+
+#: index.php:55
+msgid "Gallery"
+msgstr ""
+
+#: index.php:57
+msgid "De veelzijdige collecties van KU Leuven Bibliotheken bevatten zowel gekende topstukken als minder bekende, maar minstens even fascinerende werken. Laat je verrassen door het verhaal dat zij vertellen."
+msgstr ""
+
+#: index.php:60
+msgid "Discover special works"
+msgstr ""
+
+#: index.php:78
+msgid "Projects"
+msgstr ""
+
+#: index.php:80
+msgid "Voor KU Leuven Bibliotheken is het digitaal beschikbaar maken van haar collecties een topprioriteit. Maak kennis met onze digitaliseringsprojecten en –programma’s."
+msgstr ""
+
+#: index.php:83
+msgid "Discover the digitalisation projects"
+msgstr ""
+
+#: index.php:99
+msgid "Recent exhibits"
+msgstr ""
+
+#: index.php:116
+msgid "view exhibit"
+msgstr ""
+
+#: index.php:123
+msgid "All exhibits"
+msgstr ""
+
+#: index.php:136
+msgid "Recent special works"
+msgstr ""
+
+#: index.php:153
+msgid "View this work"
+msgstr ""
+
+#: index.php:160
+msgid "All special works"
+msgstr ""
+
+#: index.php:173
+msgid "Recent projects"
+msgstr ""
+
+#: index.php:190
+msgid "View project"
+msgstr ""
+
+#: index.php:197
+msgid "All projects"
+msgstr ""
+
+#: items/show.php:103
+msgid "View more information"
+msgstr ""
+
+#: items/show.php:109
+msgid "View the complete object"
+msgstr ""
+
+#: solr-search/results/index.php:8
+msgid "The collection"
+msgstr ""
+
+#: solr-search/results/index.php:8
+msgid "results"
+msgstr ""
+
+#: solr-search/results/index.php:15
+msgid "Search the collection"
+msgstr ""
+
+#: solr-search/results/index.php:52
+msgid "Filter on:"
+msgstr ""
+
+msgid "exhibit"
+msgstr ""
+
+msgid "special work"
+msgstr ""
+
+msgid "Exhibits"
+msgstr ""

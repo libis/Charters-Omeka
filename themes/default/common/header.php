@@ -37,27 +37,31 @@
           <section class="nav-section">
             <div class="container">
               <nav class="navbar">
-                <img class="logo" src="<?php echo img('zegel.png');?>">
+                <!--<img class="logo" src="<?php echo img('zegel.png');?>">-->
                 <a class="brand" href="<?php echo WEB_ROOT;?>">Charter</a>
                 <div class="right">
                   <div id="lang-switcher" class="ui-dropdown-list">
                       <?php
-                        $languages = array('en'=> 'EN','nl' => 'NL');
+                        $languages = array('en'=> 'EN','nl_BE' => 'NL');
                         $path = url();
+                        $request = Zend_Controller_Front::getInstance()->getRequest();
+                        $currentLocale = Zend_Registry::get('bootstrap')->getResource('Locale')->toString();
+                        $currentUrl = $request ->getRequestUri();
+                        $query = array();
                       ?>
 
     			            <h2 class="visuallyhidden">Sprache wählen</h2>
                       <?php foreach ($languages as $locale => $language): ?>
-                        <?php if ($locale == $lang): ?>
+                        <?php if ($locale == $currentLocale): ?>
                             <p class="ui-dropdown-list-trigger">
                             <span class="visuallyhidden">Aktuelle Sprache: </span> <strong><?php echo $language ?></strong></p>
                         <?php endif; ?>
                       <?php endforeach; ?>
                 			<ul>
                       <?php foreach ($languages as $locale => $language): ?>
-                          <?php if ($locale != $lang): ?>
-                               <li><a href="<?php echo str_replace($lang,$locale,$path);
-                               ?>">
+                          <?php $url = url('setlocale', array('locale' => $locale, 'redirect' => $currentUrl) + $query); ?>
+                          <?php if ($locale != $currentLocale): ?>
+                               <li><a href="<?php echo $url;?>">
                                    <?php echo $language ?>
                                </a></li>
                           <?php endif;?>

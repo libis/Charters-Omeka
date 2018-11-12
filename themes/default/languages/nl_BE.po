@@ -1,0 +1,210 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: UBtheme\n"
+"Report-Msgid-Bugs-To: http://github.com/omeka/plugin-SimplePages/issues\n"
+"POT-Creation-Date: 2012-01-09 21:49-0500\n"
+"PO-Revision-Date: 2018-10-25 15:29+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: common/footer.php:17
+msgid "Contact"
+msgstr "Contact"
+
+#: common/footer.php:18
+msgid "Collection holders & partners"
+msgstr "Collectiehouders & partners"
+
+#: common/footer.php:19
+msgid "Copyright"
+msgstr "Copyright"
+
+#: common/footer.php:20
+msgid "About the website"
+msgstr "Over de website"
+
+#: common/footer.php:21
+msgid "KU Leuven Libraries"
+msgstr "KU Leuven Bibliotheken"
+
+#: common/footer.php:31
+msgid "Website by"
+msgstr "Website door"
+
+#: common/header.php:91
+msgid "Search..."
+msgstr "Zoek..."
+
+#: common/header.php:105
+msgid "Search tips"
+msgstr "Zoektips"
+
+msgid ""
+"Grasduin in de hier tentoongestelde werken. Om alle werken te zien, kun je "
+"het zoekveld leeg laten en meteen op ‘zoeken’ klikken."
+msgstr ""
+"Grasduin in de hier tentoongestelde werken. Om alle werken te zien, kun je "
+"het zoekveld leeg laten en meteen op ‘zoeken’ klikken."
+
+#: exhibit-builder/exhibits/browse.php:53
+msgid "Filter: "
+msgstr ""
+
+#: exhibit-builder/exhibits/browse.php:56
+msgid "All"
+msgstr "Alles"
+
+#: exhibit-builder/exhibits/browse.php:93
+msgid "read more"
+msgstr "lees meer"
+
+#: exhibit-builder/exhibits/summary.php:38
+msgid "Intro"
+msgstr ""
+
+#: functions.php:40
+msgid "By:"
+msgstr "Door:"
+
+#: functions.php:90
+msgid "Is part of"
+msgstr "Maakt deel uit van"
+
+#: index.php:9
+msgid "EXPO collection"
+msgstr "EXPO collectie"
+
+#: index.php:15
+msgid "Search the website"
+msgstr "Zoek in de website"
+
+#: index.php:17 solr-search/results/index.php:17
+msgid "search"
+msgstr "zoeken"
+
+#: index.php:36
+msgid "Virtual exhibits"
+msgstr "Virtuele tentoonstellingen"
+
+#: index.php:39
+msgid ""
+"Curatoren putten uit de rijke collecties van KU Leuven Bibliotheken en nemen "
+"je mee in hun geschiedenis. Ontdek onze online exposities."
+msgstr ""
+"Curatoren putten uit de rijke collecties van KU Leuven Bibliotheken en nemen "
+"je mee in hun geschiedenis. Ontdek onze online exposities."
+
+#: index.php:42
+msgid "Visit the exhibits"
+msgstr "Bezoek de tentoonstellingen"
+
+#: index.php:55
+msgid "Gallery"
+msgstr "Galerij"
+
+#: index.php:57
+msgid ""
+"De veelzijdige collecties van KU Leuven Bibliotheken bevatten zowel gekende "
+"topstukken als minder bekende, maar minstens even fascinerende werken. Laat "
+"je verrassen door het verhaal dat zij vertellen."
+msgstr ""
+"De veelzijdige collecties van KU Leuven Bibliotheken bevatten zowel gekende "
+"topstukken als minder bekende, maar minstens even fascinerende werken. Laat "
+"je verrassen door het verhaal dat zij vertellen."
+
+#: index.php:60
+msgid "Discover special works"
+msgstr "Ontdek bijzondere werken"
+
+#: index.php:78
+msgid "Projects"
+msgstr "Projecten"
+
+#: index.php:80
+msgid ""
+"Voor KU Leuven Bibliotheken is het digitaal beschikbaar maken van haar "
+"collecties een topprioriteit. Maak kennis met onze digitaliseringsprojecten "
+"en –programma’s."
+msgstr ""
+"Voor KU Leuven Bibliotheken is het digitaal beschikbaar maken van haar "
+"collecties een topprioriteit. Maak kennis met onze digitaliseringsprojecten "
+"en –programma’s."
+
+#: index.php:83
+msgid "Discover the digitalisation projects"
+msgstr "Bekijk de digitaliseringsprojecten"
+
+#: index.php:99
+msgid "Recent exhibits"
+msgstr "Recente tentoonstellingen"
+
+#: index.php:116
+msgid "View exhibit"
+msgstr "Bekijk tentoonstelling"
+
+#: index.php:123
+msgid "All exhibits"
+msgstr "Alle tentoonstellingen"
+
+#: index.php:136
+msgid "Recent special works"
+msgstr "Recente bijzondere werken"
+
+#: index.php:153
+msgid "View this work"
+msgstr "Bekijk dit werk"
+
+#: index.php:160
+msgid "All special works"
+msgstr "Alle bijzondere werken"
+
+#: index.php:173
+msgid "Recent projects"
+msgstr "Recente projecten"
+
+#: index.php:190
+msgid "View project"
+msgstr "Bekijk project"
+
+#: index.php:197
+msgid "All projects"
+msgstr "Alle projecten"
+
+#: items/show.php:103
+msgid "View more information"
+msgstr "Bekijk uitgebreide beschrijving"
+
+#: items/show.php:109
+msgid "View the complete object"
+msgstr "Bekijk het volledige object"
+
+#: solr-search/results/index.php:8
+msgid "The collection"
+msgstr "De collectie"
+
+#: solr-search/results/index.php:8
+msgid "results"
+msgstr "resultaten"
+
+#: solr-search/results/index.php:15
+msgid "Search the collection"
+msgstr "Zoek in de collection"
+
+#: solr-search/results/index.php:52
+msgid "Filter on:"
+msgstr "Filter op:"
+
+msgid "exhibit"
+msgstr "tentoonstelling"
+
+msgid "special work"
+msgstr "bijzonder werk"
+
+msgid "Exhibits"
+msgstr "Tentoonstellingen"

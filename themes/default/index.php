@@ -20,7 +20,7 @@
 <section class="carousel-section">
     <div class='container'>
       <div class='carousel'>
-      <h2>Verhalen</h2>
+      <h2><?php echo __("Stories");?></h2>
       <div class="owl-carousel">
         <?php $records = get_records('Exhibit',array('sort_field' => 'added', 'sort_dir' => 'd'),10);?>
         <?php foreach($records as $record):?>
