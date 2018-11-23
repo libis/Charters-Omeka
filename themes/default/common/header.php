@@ -38,7 +38,7 @@
             <div class="container">
               <nav class="navbar">
                 <!--<img class="logo" src="<?php echo img('zegel.png');?>">-->
-                <a class="brand" href="<?php echo WEB_ROOT;?>">Charter</a>
+                <a class="brand" href="<?php echo WEB_ROOT;?>">Charter Project<span> - KU Leuven</span></a>
                 <div class="right">
                   <div id="lang-switcher" class="ui-dropdown-list">
                       <?php
