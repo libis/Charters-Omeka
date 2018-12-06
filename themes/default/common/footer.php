@@ -34,7 +34,11 @@ jQuery(".search-toggle").on("click", function() {
   jQuery(".modal-search").toggleClass('active');
 });
 jQuery(document).ready(function() {
-    jQuery(".lightgallery").lightGallery();
+    jQuery(".lightgallery").lightGallery(
+    {
+      selector:'a.download-file'
+    }
+  );
 });
 jQuery(document).ready(function(){
   jQuery('a[href^="#"]').on('click',function (e) {

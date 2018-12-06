@@ -2430,6 +2430,7 @@ p.ui-dropdown-list-trigger {
   background: #fafafa;
   z-index: 1000;
   width: 100%;
+  left: 0;
 }
 
 .ui-dropdown-list li {
@@ -3311,7 +3312,6 @@ i {
 }
 
 .navbar .right {
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -3495,6 +3495,7 @@ i {
 
 .slide-nav .form-inline *:-ms-input-placeholder {
   color: rgba(68, 68, 68, 0.8);
+  height: 100%;
 }
 
 .slide-nav .nav {
