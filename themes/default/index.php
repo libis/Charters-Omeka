@@ -4,9 +4,9 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 offset-md-4 col-md-8 offset-lg-5 col-lg-6">
-            <div class="intro">
+            <!--<div class="intro">
               <?php echo libis_get_simple_page_content("homepage-info");?>
-            </div>
+            </div>-->
             <div class="logos">
               <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
               <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
@@ -19,7 +19,7 @@
 <section class="carousel-section">
     <div class='container'>
       <div class='carousel'>
-      <h2><?php echo __("Stories");?></h2>
+      <h2><?php echo __("Stories");?><span class="view-all"><a href="<?php echo url("exhibits/browse");?>"><?php echo __('Browse all stories');?></span></a></h2>
       <div class="owl-carousel">
         <?php $records = get_records('Exhibit',array('sort_field' => 'added', 'sort_dir' => 'd'),10);?>
         <?php foreach($records as $record):?>
@@ -40,9 +40,6 @@
             </div>
           </div>
         <?php endforeach;?>
-      </div>
-      <div class="view-all">
-        <a href="<?php echo url("exhibits/browse");?>"><?php echo __('Browse all stories');?></a>
       </div>
     </div>
   </div>
@@ -69,20 +66,23 @@
 </section>
 <section class="news">
   <div class="container">
-      <h2><?php echo __('Spotlight & news');?></h2>
+      <h2><?php echo __('News');?><span class="view-all"><a href="<?php echo url('news');?>"><?php echo __('More news');?></a></span></h2>
       <div class="row">
         <!-- spotlight -->
-        <div class="col-md-9">
+        <div class="col-md-12">
           <div class="row">
-            <?php $spotlights = get_records('Item',array("featured"=>"1",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
+            <?php $spotlights = get_records('Item',array("type"=>"News",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
             <?php foreach($spotlights as $record):?>
               <div class="col-12 col-sm-6 col-md-6 col-lg-4 news-home ">
                 <div class="spotlight">
                   <a href="<?php echo record_url($record);?>">
                     <?php $file = $record->getFile();?>
-                    <div class="img-top" style="background-image: url(<?php echo $file->getWebPath("fullsize"); ?>)"></div>
+                    <?php if($file):?>
+                      <div class="img-top" style="background-image: url(<?php echo $file->getWebPath("fullsize"); ?>)"></div>
+                    <?php endif;?>
                     <div class="news-item item">
                       <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
+                      <p class="datum"><?php echo metadata($record, array('Dublin Core', 'Date'));?></p>
                       <p class="description">
                         <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 150));?>
                       </p>
@@ -91,28 +91,6 @@
                 </div>
               </div>
             <?php endforeach;?>
-          </div>
-          <div class="more-news">
-                <a href="<?php echo url("solr-search");?>"><?php echo __('Explore collection');?></a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="spotlight">
-            <?php $news = get_records('Item',array("type"=>"News",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
-            <?php foreach($news as $record):?>
-              <a href="<?php echo record_url($record);?>">
-                <div class="news-item">
-                    <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
-                    <p class="datum"><?php echo metadata($record, array('Dublin Core', 'Date'));?></p>
-                    <p class="description">
-                      <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 150));?>
-                    </p>
-                </div>
-              </a>
-            <?php endforeach;?>
-            <div class="more-news">
-              <a href="<?php echo url('news');?>"><?php echo __('More news');?></a>
-            </div>
           </div>
         </div>
       </div>

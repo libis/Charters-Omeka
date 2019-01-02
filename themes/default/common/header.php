@@ -30,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,700,800,900" rel="stylesheet">
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
@@ -38,7 +39,7 @@
             <div class="container">
               <nav class="navbar">
                 <!--<img class="logo" src="<?php echo img('zegel.png');?>">-->
-                <a class="brand" href="<?php echo WEB_ROOT;?>">Charter Project<span> - KU Leuven</span></a>
+                <a class="brand" href="<?php echo WEB_ROOT;?>">Charter Project<span> KU Leuven</span></a>
                 <div class="right">
                   <div id="lang-switcher" class="ui-dropdown-list">
                       <?php
@@ -69,11 +70,9 @@
                       <?php endforeach; ?>
                       </ul>
                   </div>
-                  <button id="toggle">
-                    <p><i class="material-icons">
-                          menu
-                          </i></p>
-                  </button>
+                  <div class="toggle-container"><button id="toggle">
+                    <p><i class="material-icons">menu</i></p>
+                  </button></div>
                 </div>
               </nav>
               <nav class="navbar2">
@@ -88,15 +87,6 @@
              <button class="close"><i class="material-icons">close</i></button>
           </div>
            <div class="slide-nav">
-
-             <form class="form-inline" action="<?php echo url("solr-search");?>">
-               <div class="inputs">
-                 <input class="form-control" name="q" type="text" placeholder="Search the collection">
-               </div>
-               <div class="buttons">
-                 <button class="btn" type="submit"><i class="material-icons">search</i></button>
-               </div>
-             </form>
              <?php echo public_nav_main(array('role' => 'navigation')) -> setUlClass('nav navbar-nav'); ?>
              <div class="tags">
                <?php $tags = get_db()->getTable('Tag')->findBy(array('type'=>'Exhibit'));?>

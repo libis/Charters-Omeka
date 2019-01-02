@@ -15,7 +15,7 @@
         <!-- Search form. -->
         <div class="col-12">
           <div class="solr-top">
-            <h1>Search the collection</h1>
+            <h1><?php echo __("Search the catalogue");?></h1>
 
             <form id="solr-search-form">
               <div class="inputs">
@@ -45,7 +45,7 @@
             <!-- Results. -->
             <!-- Number found. -->
             <h1 id="num-found">
-                <?php echo __("Search the collection");?> (<?php echo $results->response->numFound; ?>)
+                <?php echo __("Search the catalogue");?> (<?php echo $results->response->numFound; ?>)
             </h1>
             <div class="solr-section-applied">
                 <!-- Applied facets. -->
@@ -132,6 +132,14 @@
         </div>
         <div class="col-md-3 col-12">
           <div class="solr-facets">
+            <form class="form-inline" action="<?php echo url("solr-search");?>">
+              <div class="inputs">
+                <input class="form-control" name="q" type="text" placeholder="Search the collection">
+              </div>
+              <div class="buttons">
+                <button class="btn" type="submit"><i class="material-icons">search</i></button>
+              </div>
+            </form>
             <h2><?php echo __('Limit your search'); ?></h2>
               <div id="facets">
                 <?php $i = 0;?>

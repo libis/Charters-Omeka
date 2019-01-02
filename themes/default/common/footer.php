@@ -5,6 +5,7 @@
                 <div>
                     <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
                     <a href="http://libis.be"><img src="<?php echo img("libis_gray.png");?>"></a>
+                    <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
                 </div>
                 <div class="footer-brand">
                   <div class="footer-content">
