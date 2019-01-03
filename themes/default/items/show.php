@@ -8,12 +8,12 @@
           <div id="lightgallery">
             <?php
               $files = get_current_record('item')->getFiles();
-              foreach($files as $file):
+              if($files):
             ?>
-                <a href="<?php echo $file->getWebPath('fullsize');?>">
-                    <img src="<?php echo $file->getWebPath('fullsize');?>" />
+                <a href="<?php echo $files[0]->getWebPath('fullsize');?>">
+                    <img src="<?php echo $files[0]->getWebPath('fullsize');?>" />
                 </a>
-            <?php endforeach;?>
+            <?php endif;?>
           </div>
         </div>
         <div class="col-md-12 col-lg-5 col-xl-4">
