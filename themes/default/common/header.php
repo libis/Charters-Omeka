@@ -38,9 +38,11 @@
           <section class="nav-section">
             <div class="container">
               <nav class="navbar">
-                <!--<img class="logo" src="<?php echo img('zegel.png');?>">-->
                 <a class="brand" href="<?php echo WEB_ROOT;?>">Charter Project<span> KU Leuven</span></a>
                 <div class="right">
+                  <div class="navbar2">
+                    <?php echo public_nav_main(array('role' => 'navigation')) -> setUlClass('nav navbar-nav'); ?>
+                  </div>
                   <div id="lang-switcher" class="ui-dropdown-list">
                       <?php
                         $languages = array('en'=> 'EN','nl_BE' => 'NL');
@@ -75,9 +77,7 @@
                   </button></div>
                 </div>
               </nav>
-              <nav class="navbar2">
-                <?php echo public_nav_main(array('role' => 'navigation')) -> setUlClass('nav navbar-nav'); ?>
-              </nav>
+
             </div>
           </section>
         </header>
