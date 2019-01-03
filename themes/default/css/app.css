@@ -3727,19 +3727,16 @@ i {
 
 .owl-carousel .center .inner {
   opacity: 1 !important;
-  background: white;
   width: 90%;
-  padding: 0.5rem 0.5rem;
-  min-height: 3rem;
   display: block;
   line-height: 1.5;
   font-size: 0.9rem;
+  min-height: 3rem;
   z-index: 1000;
   text-align: left;
   position: absolute;
   left: -0.3rem;
   bottom: -0.3rem;
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 462px) {
@@ -3750,11 +3747,13 @@ i {
 
 .owl-carousel .center .inner a {
   font-weight: 900;
+  padding: 0.5rem;
   color: #333;
-  margin-bottom: 0.3rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
+  background: white;
+  border-left: 2px solid #eee;
 }
 
 .owl-carousel .center .inner .credits {

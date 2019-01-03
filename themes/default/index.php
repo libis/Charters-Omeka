@@ -28,7 +28,6 @@
             <img src="<?php echo $file->getWebPath("square_thumbnail");?>"/>
             <div class="inner">
               <a href="<?php echo record_url($record);?>"><?php echo metadata($record, 'Title');?></a>
-              <p class="credits"><?php echo metadata($record, 'Credits');?></p>
             </div>
             <div class="tags fadeInRight">
               <?php
