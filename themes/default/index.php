@@ -25,7 +25,7 @@
         <?php foreach($records as $record):?>
           <div class="item">
             <?php $file = get_record_by_id('File',$record->cover_image_file_id);?>
-            <img src="<?php echo $file->getWebPath("square_thumbnail");?>"/>
+            <a href="<?php echo record_url($record);?>"><img src="<?php echo $file->getWebPath("square_thumbnail");?>"/></a>
             <div class="inner">
               <a href="<?php echo record_url($record);?>"><?php echo metadata($record, 'Title');?></a>
             </div>
