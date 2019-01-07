@@ -33,7 +33,7 @@
               <?php
                 $tags = get_db()->getTable('Tag')->findBy(array('record'=>$record));
                 foreach ($tags as $tag) {
-                  echo '<span><a href="' . html_escape(url('exhibit/browse', array('tags' => $tag->name))) . '" rel="tag">' . html_escape($tag->name) . '</a></span>';
+                  echo '<span><a href="' . html_escape(url('exhibits/browse', array('tags' => $tag->name))) . '" rel="tag">' . html_escape($tag->name) . '</a></span>';
                 }
               ?>
             </div>
