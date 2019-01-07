@@ -4163,11 +4163,18 @@ section.news .spotlight img {
   font-weight: 100;
 }
 
+.content-section,
+.exhibit-show-section,
+.simple-page-section {
+  min-height: 35vw;
+}
+
 @media (max-width: 768px) {
   .content-section,
   .exhibit-show-section,
   .simple-page-section {
     margin-top: 0px;
+    min-height: 0;
   }
 }
 
@@ -4252,7 +4259,6 @@ section.news .spotlight img {
 .exhibit-show-section .content,
 .simple-page-section .content {
   margin-bottom: 5rem;
-  min-height: 500px;
 }
 
 .content-section .content h1,
