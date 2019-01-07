@@ -3596,9 +3596,9 @@ i {
 
 .carousel-section h2, .news h2, .exhibit-section h2, .timeline-section h2 {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
-  color: #333;
+  color: rgba(68, 68, 68, 0.9);
   padding: 0;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ededed;
@@ -3627,7 +3627,6 @@ i {
 
 .owl-carousel {
   position: relative;
-  padding: 0 0 17px;
   /*==== FADE IN RIGHT ===*/
 }
 
@@ -3701,6 +3700,7 @@ i {
 .owl-carousel .tags span {
   display: block;
   height: 1.8rem;
+  margin-bottom: 1px;
 }
 
 .owl-carousel .tags a {
