@@ -83,7 +83,7 @@
                       <h3><?php echo metadata($record, array('Dublin Core', 'Title'));?></h3>
                       <p class="datum"><?php echo metadata($record, array('Dublin Core', 'Date'));?></p>
                       <p class="description">
-                        <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 150));?>
+                        <?php echo metadata($record, array('Dublin Core', 'Description'), array('snippet' => 250));?>
                       </p>
                     </div>
                   </a>
