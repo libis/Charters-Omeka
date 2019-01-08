@@ -1,13 +1,13 @@
 <?php
-$title = __('Browse Exhibits');
-echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
+$title = __('Browse stories');
+echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
 ?>
 <section class="exhibit-section simple-page-section">
     <div class="container simple-page-container">
         <!--<div class='breadcrumbs'>
             <p id="simple-pages-breadcrumbs">
               <span><a href="<?php echo url('/');?>"><?php echo __("Home");?></a></span>
-               > <span><?php echo __("Exhibits");?></span>
+               > <span><?php echo __("Stories");?></span>
             </p>
         </div>-->
         <h2><?php echo $title; ?></h2>
