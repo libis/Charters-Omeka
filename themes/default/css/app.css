@@ -4260,6 +4260,8 @@ section.news .spotlight img {
 .content-section .content,
 .exhibit-show-section .content,
 .simple-page-section .content {
+  padding: 1rem;
+  background: white;
   margin-bottom: 5rem;
 }
 
