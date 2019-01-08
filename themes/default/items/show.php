@@ -81,14 +81,15 @@
               <?php endif;?>
 
               <br>
-
+              <?php echo libis_link_to_related_exhibits($item);?>
+              
               <?php if (isset($texts['Object Item Type Metadata']['IE nummer'])): ?>
               <div class="element">
-                  <i class="material-icons">&#xE3B6;</i><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Object Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
+                  <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Object Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
               </div>
               <?php endif; ?>
 
-              <?php echo libis_link_to_related_exhibits($item);?>
+
             </div>
         </div>
     </div>
