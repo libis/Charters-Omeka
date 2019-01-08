@@ -3807,7 +3807,6 @@ section.news {
 section.news p {
   color: rgba(68, 68, 68, 0.8);
   font-size: 0.9rem;
-  font-family: "Lato", sans-serif;
 }
 
 section.news .news-home .spotlight {
@@ -3835,10 +3834,6 @@ section.news .spotlight .item {
   min-height: 250px;
 }
 
-section.news .spotlight .item h3 {
-  margin-bottom: 1rem;
-}
-
 section.news .spotlight .news-item {
   margin-bottom: 1.5rem;
   transition: all 0.3s ease 0s;
@@ -3847,7 +3842,7 @@ section.news .spotlight .news-item {
 section.news .spotlight .news-item .datum {
   font-size: 0.7rem;
   color: rgba(36, 36, 36, 0.5);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
 }
 
 section.news .spotlight .item:hover {
