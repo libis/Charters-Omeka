@@ -2747,7 +2747,7 @@ p.ui-dropdown-list-trigger {
 
 /* main: app.scss */
 .item-section {
-  background: #dadada;
+  background: #e5e5e5;
   padding-top: 0;
 }
 
@@ -2777,7 +2777,7 @@ p.ui-dropdown-list-trigger {
 
 .item-section .image-row {
   overflow: hidden;
-  background: #e7e7e7;
+  background: #f4f4f4;
   position: relative;
 }
 
@@ -4292,6 +4292,8 @@ section.news .spotlight img {
 .exhibit-show-section .content .shortcode,
 .simple-page-section .content .shortcode {
   border-bottom: 1px solid rgba(0, 64, 122, 0.5);
+  padding: 1rem;
+  background: white;
   margin-bottom: 1.5rem;
 }
 
@@ -4299,7 +4301,7 @@ section.news .spotlight img {
 .exhibit-show-section .content .shortcode h2,
 .simple-page-section .content .shortcode h2 {
   font-size: 1.2rem;
-  font-weight: 100;
+  font-weight: 500;
   font-family: "Lato", sans-serif;
 }
 
@@ -4358,6 +4360,21 @@ section.news .spotlight img {
     padding: 1rem;
     margin: 0;
   }
+}
+
+.browse .content {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+.browse .row {
+  margin-bottom: 2rem;
+}
+
+.browse .date {
+  color: #666;
+  font-size: 0.9rem;
 }
 
 .exhibit-section {

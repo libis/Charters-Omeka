@@ -1,10 +1,49 @@
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'item show')); ?>
+<?php $type = metadata('item','item_type_name');?>
 
-<section class="item-section">
+<?php if ($type == 'News'): ?>
+  <div class="simple-page-section ">
+    <div class="container simple-page-container">
+      <div class="breadcrumbs">
+        <p id="simple-pages-breadcrumbs">
+          <span>
+            <a href="<?php echo url('/');?>"><?php echo __('Home');?></a> ›
+            <a href="<?php echo url('news');?>"><?php echo __('News');?></a> ›
+            <?php echo strip_tags(metadata('item', array('Dublin Core', 'Title')));?>
+          </span>
+        </p>
+      </div>
+      <!-- Content -->
+      <div class="row">
+
+          <div class="col-sm-3 col-xs-12">
+            <?php
+              $files = get_current_record('item')->getFiles();
+              if($files):
+            ?>
+                <a href="<?php echo $files[0]->getWebPath('fullsize');?>">
+                    <img src="<?php echo $files[0]->getWebPath('fullsize');?>" />
+                </a>
+            <?php endif;?>
+          </div>
+          <div class="col-sm-9 col-xs-12">
+            <div class='content'>
+              <h1 class="">
+                  <?php echo strip_tags(metadata('item', array('Dublin Core', 'Title'))); ?>
+              </h1>
+              <p class="date"><?php echo metadata('item', array('Dublin Core', 'Date')); ?></p>
+              <p class="description"><?php echo metadata('item', array('Dublin Core', 'Description')); ?></p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+<?php else: ?>
+  <section class="item-section">
   <div class="container-fluid">
     <div class="row">
         <div class="col-md-12  col-lg-7 col-xl-8 image-row">
-
           <div id="lightgallery">
             <?php
               $files = get_current_record('item')->getFiles();
@@ -16,6 +55,7 @@
             <?php endif;?>
           </div>
         </div>
+
         <div class="col-md-12 col-lg-5 col-xl-4">
           <?php $texts =  all_element_texts('item',array('return_type'=>'array'));?>
             <div class='metadata'>
@@ -82,19 +122,20 @@
 
               <br>
               <?php echo libis_link_to_related_exhibits($item);?>
-              
+
               <?php if (isset($texts['Object Item Type Metadata']['IE nummer'])): ?>
               <div class="element">
                   <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Object Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
               </div>
               <?php endif; ?>
-
-
             </div>
         </div>
+
     </div>
   </div>
-</section>
+  </section>
+<?php endif;?>
+
 <script>
     //image control
     var divs = jQuery('div[id^="map-"]').hide(),
