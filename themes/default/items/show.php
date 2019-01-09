@@ -63,10 +63,17 @@
                   <?php echo strip_tags(metadata('item', array('Dublin Core', 'Title'))); ?>
               </h1>
 
-              <?php if (isset($texts['Dublin Core']['Subject'])): ?>
+              <?php if (isset($texts['Object Item Type Metadata']['Formal title'])): ?>
               <div class="element">
-                  <h3><?php echo __('Subject'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Subject']); ?></p></div>
+                  <h3><?php echo __('Formal title'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Object Item Type Metadata']['Formal title']);?></p></div>
+              </div>
+              <?php endif; ?>
+
+              <?php if (isset($texts['Object Item Type Metadata']['Place of issue'])): ?>
+              <div class="element">
+                  <h3><?php echo __('Place of issue'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Object Item Type Metadata']['Place of issue']);?></p></div>
               </div>
               <?php endif; ?>
 
@@ -77,20 +84,6 @@
               </div>
               <?php endif; ?>
 
-              <?php if (isset($texts['Dublin Core']['Source'])): ?>
-              <div class="element">
-                  <h3><?php echo 'Collectie'; ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Source']); ?></p></div>
-              </div>
-              <?php endif; ?>
-
-              <?php if (isset($texts['Dublin Core']['Creator'])): ?>
-              <div class="element">
-                  <h3><?php echo __('Creator'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Creator']); ?></p></div>
-              </div>
-              <?php endif; ?>
-
               <?php if (isset($texts['Dublin Core']['Date'])): ?>
               <div class="element">
                   <h3><?php echo __('Date'); ?></h3>
@@ -98,17 +91,17 @@
               </div>
               <?php endif; ?>
 
-              <?php if (isset($texts['Dublin Core']['Publisher'])): ?>
+              <?php if (isset($texts['Object Item Type Metadata']['Issuing party'])): ?>
               <div class="element">
-                  <h3><?php echo __('Publisher'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Publisher']); ?></p></div>
+                  <h3><?php echo __('Issuing party'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Object Item Type Metadata']['Issuing party']);?></p></div>
               </div>
               <?php endif; ?>
 
-              <?php if (isset($texts['Dublin Core']['Coverage'])): ?>
+              <?php if (isset($texts['Dublin Core']['References'])): ?>
               <div class="element">
-                  <h3><?php echo 'Plaats'; ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['Coverage']); ?></p></div>
+                  <h3><?php echo __('Reference'); ?></h3>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['References']); ?></p></div>
               </div>
               <?php endif; ?>
 
