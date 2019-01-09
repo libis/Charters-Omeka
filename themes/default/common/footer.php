@@ -5,14 +5,12 @@
                 <div>
                     <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
                     <a href="http://libis.be"><img src="<?php echo img("libis_gray.png");?>"></a>
-                    <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
+                    <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img src="<?php echo img("Logo_baillet.png");?>"></a>
                 </div>
                 <div class="footer-brand">
                   <div class="footer-content">
                     <!--<p><a class="footer-logo" href="<?php echo url("/");?>">digital<span>Husserl</span></a> Straatstraat 22 | 3000 Leuven | +3216222222</p>-->
                     <ul>
-                        <li><a href="">Link 1</a></li>
-                        <li><a href="">Link 1</a></li>
                         <li><a href="">Cookie policy</a></li>
                     </ul>
                   </div>

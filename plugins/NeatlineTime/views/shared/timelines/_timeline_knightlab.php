@@ -7,7 +7,7 @@
 if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
 ?>
 
-<div id="timeline-<?php echo $timeline->id; ?>" style="width: 100%; height: 600px"></div>
+<div id="timeline-<?php echo $timeline->id; ?>" style="width: 100%; height: 650px"></div>
 
 <script>
   jQuery(document).ready(function($) {

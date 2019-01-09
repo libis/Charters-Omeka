@@ -9,7 +9,7 @@
             </div>-->
             <div class="logos">
               <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
-              <a href=""><img src="<?php echo img("Logo_baillet.png");?>"></a>
+              <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img src="<?php echo img("Logo_baillet.png");?>"></a>
             </div>
           </div>
         </div>
