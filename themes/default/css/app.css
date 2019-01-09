@@ -4259,9 +4259,16 @@ section.news .spotlight img {
 .content-section .content,
 .exhibit-show-section .content,
 .simple-page-section .content {
-  padding: 1rem;
+  padding: 1.5rem;
   background: white;
   margin-bottom: 5rem;
+}
+
+.content-section .content .date,
+.exhibit-show-section .content .date,
+.simple-page-section .content .date {
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .content-section .content h1,
@@ -4269,7 +4276,7 @@ section.news .spotlight img {
 .simple-page-section .content h1 {
   font-family: "Lato", sans-serif;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   color: #444;
   margin-bottom: 2rem;
