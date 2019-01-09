@@ -3608,13 +3608,14 @@ i {
 .carousel-section .view-all, .carousel-section .more-news, .news .view-all, .news .more-news, .exhibit-section .view-all, .exhibit-section .more-news, .timeline-section .view-all, .timeline-section .more-news {
   text-align: right;
   float: right;
-  background: #ededed;
-  padding: 0 0.5rem;
+  vertical-align: middle;
 }
 
 .carousel-section .view-all a, .carousel-section .more-news a, .news .view-all a, .news .more-news a, .exhibit-section .view-all a, .exhibit-section .more-news a, .timeline-section .view-all a, .timeline-section .more-news a {
   font-size: 0.8rem;
-  margin-left: 5px;
+  background: #ededed;
+  padding: 0 0.5rem;
+  padding: 0.7rem 0.4rem 0.6rem 0.4rem;
   font-weight: 400;
   text-transform: uppercase;
   vertical-align: text-bottom;
@@ -4728,6 +4729,7 @@ footer .copyright {
 /* main: app.scss */
 .timeline-section {
   margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .tl-timeline h2 {
