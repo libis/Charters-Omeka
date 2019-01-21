@@ -3,9 +3,8 @@
             <div id="footer-text">
                 <?php echo get_theme_option('Footer Text'); ?>
                 <div>
-                    <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
-                    <a href="http://libis.be"><img src="<?php echo img("libis_gray.png");?>"></a>
-                    <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img src="<?php echo img("Logo_baillet.png");?>"></a>
+                    <a href="http://kuleuven.be"><img height="60px" src="<?php echo img("KULEUVEN.png");?>"></a>
+                    <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="70px" src="<?php echo img("Logo_baillet.png");?>"></a>
                 </div>
                 <div class="footer-brand">
                   <div class="footer-content">
