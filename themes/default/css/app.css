@@ -3508,91 +3508,88 @@ i {
   display: flex;
 }
 
-.hero-section {
-  background: url("../images/bg.jpeg") no-repeat;
+/*.hero-section{
+  background: url('../images/bg.jpeg') no-repeat;
   background-size: cover;
   background-position: 100% 15%;
 }
 
 .jumbotron {
-  display: none;
-}
+    display: none;
+    //padding-top:10rem;
+    //background:rgba(0,0,0,0.12);
 
-.jumbotron .intro {
-  margin: 6rem 0rem 2rem 0rem;
-  color: white;
-  text-align: right;
-}
+    .intro{
+        margin:6rem 0rem 2rem 0rem;
+        color: white;
+        text-align: right;
+        //background: rgba($brand-primary,0.2);
+        @include breakpoint(xs) {
+            margin:4rem 0rem 2rem 0rem;
+        }
 
-@media (max-width: 462px) {
-  .jumbotron .intro {
-    margin: 4rem 0rem 2rem 0rem;
-  }
-}
+        h2{
+          margin-bottom:0.6rem;
+          font-weight: 900;
+          font-size: 3.5rem;
+          color:white;
+          font-family: $serif;
 
-.jumbotron .intro h2 {
-  margin-bottom: 0.6rem;
-  font-weight: 900;
-  font-size: 3.5rem;
-  color: white;
-  font-family: "Open Sans", sans-serif;
-}
+          @include breakpoint(xs) {
+              font-size: 2.5rem;
+          }
+        }
 
-@media (max-width: 462px) {
-  .jumbotron .intro h2 {
-    font-size: 2.5rem;
-  }
-}
+        p{
+          font-size: 1.2rem;
+          font-weight: 500;
+          font-family: $sans;
+          text-shadow: none;
+          line-height: 1.4;
+        }
 
-.jumbotron .intro p {
-  font-size: 1.2rem;
-  font-weight: 500;
-  font-family: "Lato", sans-serif;
-  text-shadow: none;
-  line-height: 1.4;
-}
+        i{
+          vertical-align: text-bottom;
+        }
 
-.jumbotron .intro i {
-  vertical-align: text-bottom;
-}
+        .more{
+          font-size: 0.7rem;
+          margin-top: 2rem;
+          margin-bottom:0;
+          font-family: $sans;
 
-.jumbotron .intro .more {
-  font-size: 0.7rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
-  font-family: "Lato", sans-serif;
-}
+          a{
+            color: white;
+            border-radius: 5px;
+            margin-left:6px;
+            text-transform: uppercase;
+            font-weight:900;
+            background: $brand-primary;
+            padding:0.5rem 0.5rem;
+          }
+        }
+    }
 
-.jumbotron .intro .more a {
-  color: white;
-  border-radius: 5px;
-  margin-left: 6px;
-  text-transform: uppercase;
-  font-weight: 900;
-  background: #00407a;
-  padding: 0.5rem 0.5rem;
-}
+    .logos{
+      width: 100%;
+      text-align: right;
+      margin-bottom: 2rem;
 
-.jumbotron .logos {
-  width: 100%;
-  text-align: right;
-  margin-bottom: 2rem;
-}
+      a{
+        vertical-align: top;
 
-.jumbotron .logos a {
-  vertical-align: top;
-}
+        &:hover{
+          background: none;
+        }
+      }
 
-.jumbotron .logos a:hover {
-  background: none;
-}
-
-.jumbotron .logos img {
-  height: 55px;
-  width: auto;
-  margin-left: 0.5rem;
-}
-
+      img{
+        height:55px;
+        width: auto;
+        margin-left: 0.5rem;
+      }
+    }
+}*/
 .carousel-section h2, .news h2, .exhibit-section h2, .timeline-section h2 {
   font-size: 1.3rem;
   font-weight: 500;

@@ -21,8 +21,6 @@
             <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
         </div>
     </footer><!-- end footer -->
-
-  </main>
 </body>
 <script>
 jQuery(".toggle").on("click", function() {
@@ -32,13 +30,8 @@ jQuery(".search-toggle").on("click", function() {
   jQuery(".modal-search").toggleClass('active');
 });
 jQuery(document).ready(function() {
-    jQuery(".lightgallery").lightGallery(
-    {
-      selector:'a.download-file'
-    }
-  );
-});
-jQuery(document).ready(function(){
+
+
   jQuery('a[href^="#"]').on('click',function (e) {
       e.preventDefault();
 
@@ -67,6 +60,48 @@ jQuery(document).ready(function(){
     });
 
   });
+
+  jQuery(".owl-carousel").owlCarousel(
+    {
+        center:true,
+        loop:true,
+        margin:30,
+        nav:true,
+        autoWidth:true,
+        items:3,
+        navText : ['<i class="material-icons">navigate_before</i>','<i class="material-icons">navigate_next</i>'],
+        responsive:{
+        0:{
+            items:1,
+            stagePadding: 60
+        },
+        600:{
+            items:1,
+            stagePadding: 100
+        },
+        1000:{
+            items:1,
+            stagePadding: 200
+        },
+        1200:{
+            items:3,
+            stagePadding: 250
+        },
+        1400:{
+            items:3,
+            stagePadding: 300
+        },
+        1600:{
+            items:3,
+            stagePadding: 350
+        },
+        1800:{
+            items:3,
+            stagePadding: 400
+        }
+      }
+    }
+  );
 });
 
 </script>

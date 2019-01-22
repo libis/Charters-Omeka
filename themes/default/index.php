@@ -1,25 +1,8 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-<section class="hero-section">
-  <div class="jumbotron">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <!--<div class="intro">
-              <?php echo libis_get_simple_page_content("homepage-info");?>
-            </div>-->
-            <div class="logos">
-              <a href="http://kuleuven.be"><img src="<?php echo img("KULEUVEN.png");?>"></a>
-              <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img src="<?php echo img("Logo_baillet.png");?>"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</section>
 <section class="carousel-section">
     <div class='container'>
       <div class='carousel'>
-      <h2><?php echo __("Stories");?><span class="view-all"><a href="<?php echo url("exhibits/browse");?>"><?php echo __('Browse all stories');?></span></a></h2>
+      <h2><?php echo __("Stories");?><span class="view-all"><a href="<?php echo url("exhibits/browse");?>"><?php echo __('Browse all stories');?></a></span></h2>
       <div class="owl-carousel">
         <?php $records = get_records('Exhibit',array('sort_field' => 'added', 'sort_dir' => 'd'),10);?>
         <?php foreach($records as $record):?>
@@ -95,50 +78,6 @@
       </div>
   </div>
 </section>
-<script>
-jQuery(document).ready(function(){
-  jQuery(".owl-carousel").owlCarousel(
-    {
-        center:true,
-        loop:true,
-        margin:30,
-        nav:true,
-        autoWidth:true,
-        items:3,
-        navText : ['<i class="material-icons">navigate_before</i>','<i class="material-icons">navigate_next</i>'],
-        responsive:{
-        0:{
-            items:1,
-            stagePadding: 60
-        },
-        600:{
-            items:1,
-            stagePadding: 100
-        },
-        1000:{
-            items:1,
-            stagePadding: 200
-        },
-        1200:{
-            items:3,
-            stagePadding: 250
-        },
-        1400:{
-            items:3,
-            stagePadding: 300
-        },
-        1600:{
-            items:3,
-            stagePadding: 350
-        },
-        1800:{
-            items:3,
-            stagePadding: 400
-        }
-      }
-    }
-  );
-});
-</script>
+
 
 <?php echo foot(); ?>

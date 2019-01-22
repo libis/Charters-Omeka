@@ -18,19 +18,22 @@
 
     <!-- Plugin Stuff -->
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
-
+    <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
     <!-- Stylesheets & javascripts -->
     <?php
-    queue_js_file("lightgallery-all.min");
-    queue_js_file(array("owl.carousel.min","slick.min"));
-    queue_css_file(array('iconfonts', 'app.min','lightgallery.min','owl.carousel','owl.theme.default'));
+    queue_js_file(array("slick.min","lightgallery-all.min","owl.carousel"));
+    queue_css_file(array('iconfonts', 'app.min','lightgallery.min','owl.carousel.min','owl.theme.default.min'));
     echo head_css();
     echo head_js();
     ?>
+
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
