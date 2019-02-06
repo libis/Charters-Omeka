@@ -63,17 +63,17 @@
                   <?php echo strip_tags(metadata('item', array('Dublin Core', 'Title'))); ?>
               </h1>
 
-              <?php if (isset($texts['Object Item Type Metadata']['Formal title'])): ?>
+              <?php if (isset($texts['Charter Item Type Metadata']['Formal title'])): ?>
               <div class="element">
                   <h3><?php echo __('Formal title'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Object Item Type Metadata']['Formal title']);?></p></div>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Charter Item Type Metadata']['Formal title']);?></p></div>
               </div>
               <?php endif; ?>
 
-              <?php if (isset($texts['Object Item Type Metadata']['Place of issue'])): ?>
+              <?php if (isset($texts['Charter Item Type Metadata']['Place of issue'])): ?>
               <div class="element">
                   <h3><?php echo __('Place of issue'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Object Item Type Metadata']['Place of issue']);?></p></div>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Charter Item Type Metadata']['Place of issue']);?></p></div>
               </div>
               <?php endif; ?>
 
@@ -91,17 +91,17 @@
               </div>
               <?php endif; ?>
 
-              <?php if (isset($texts['Object Item Type Metadata']['Issuing party'])): ?>
+              <?php if (isset($texts['Charter Item Type Metadata']['Issuing party'])): ?>
               <div class="element">
                   <h3><?php echo __('Issuing party'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Object Item Type Metadata']['Issuing party']);?></p></div>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Charter Item Type Metadata']['Issuing party']);?></p></div>
               </div>
               <?php endif; ?>
 
-              <?php if (isset($texts['Dublin Core']['References'])): ?>
+              <?php if (isset($texts['Charter Item Type Metadata']['Reference'])): ?>
               <div class="element">
                   <h3><?php echo __('Reference'); ?></h3>
-                  <div class="element-text"><p><?php echo implode(', ',$texts['Dublin Core']['References']); ?></p></div>
+                  <div class="element-text"><p><?php echo implode(', ',$texts['Charter Item Type Metadata']['Reference']); ?></p></div>
               </div>
               <?php endif; ?>
 
@@ -116,9 +116,9 @@
               <br>
               <?php echo libis_link_to_related_exhibits($item);?>
 
-              <?php if (isset($texts['Object Item Type Metadata']['IE nummer'])): ?>
+              <?php if (isset($texts['Charter Item Type Metadata']['IE nummer'])): ?>
               <div class="element">
-                  <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Object Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
+                  <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Charter Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
               </div>
               <?php endif; ?>
             </div>
