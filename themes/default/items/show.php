@@ -129,8 +129,9 @@
 
                 foreach($time_items as $time_item):
                   if($time_item->id == get_current_record('item')->id):
-                    $hashlink = 'event-'.str_replace(' ','-',trim(strtolower(strip_tags(metadata('item', array('Dublin Core', 'Title'))))));
-                    $hashlink = str_replace(array('.', ','), "", $hashlink);
+
+                    $hashlink = 'event-'.str_replace(' ','-',trim(strtolower(preg_replace("/[^A-Za-z0-9 ]/", "",metadata('item', array('Dublin Core', 'Title'))))));
+                    //$hashlink = str_replace(array('.', ','), "", $hashlink);
                     echo "<i class='material-icons'>timeline</i><a href='".url("/")."/neatline-time/timelines/show/1#".$hashlink."'>Bekijk het object op de tijdslijn</a>";
                    endif;
                 endforeach;
