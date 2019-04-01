@@ -35,7 +35,7 @@ class ExhibitBuilder_View_Helper_ExhibitAttachment extends Zend_View_Helper_Abst
 
             $fileOptions['linkAttributes']['data-lightbox'] = "set";
             $fileOptions['linkAttributes']['data-title'] = $caption." ". exhibit_builder_link_to_exhibit_item(null, $linkProps, $item);
-            $fileOptions['linkAttributes']['href'] = file_display_url($file);
+            $fileOptions['linkAttributes']['href'] = exhibit_builder_exhibit_item_uri($item);
 
 
             $html = file_markup($file, $fileOptions, null);
