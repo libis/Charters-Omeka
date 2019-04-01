@@ -39,6 +39,8 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
             // If the item has a description, include it
             if (data.events[i].description) {
               timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description;
+            }else{
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>";
             }
 
             // If the record has an end date, include it
