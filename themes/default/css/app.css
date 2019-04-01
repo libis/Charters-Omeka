@@ -4738,6 +4738,10 @@ footer .copyright {
   margin-bottom: 3rem;
 }
 
+.tl-timeline .tl-headline {
+  display: none;
+}
+
 .tl-timeline h2 {
   text-align: left;
   border-bottom: none;

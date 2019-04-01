@@ -27,7 +27,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
             // Create the slide object for the record
             var timelineEntry = {
               "text": {
-                "headline": "<a href=" + data.events[i].link + ">" + data.events[i].title + "</a>"
+                "headline": data.events[i].title
               },
               "start_date": {
                   "year": startDate[0],
@@ -38,7 +38,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
 
             // If the item has a description, include it
             if (data.events[i].description) {
-              timelineEntry.text["text"] = data.events[i].description;
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description;
             }
 
             // If the record has an end date, include it
@@ -78,8 +78,12 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
 
           var timelineDivID = 'timeline-<?php echo $timeline->id; ?>';
 
+          var options = {
+            hash_bookmark: true
+          };
+
           // initialize the timeline instance
-          window.timeline = new TL.Timeline(timelineDivID, slides);
+          window.timeline = new TL.Timeline(timelineDivID, slides,options);
 
           function parseDate(entryDateString) {
             var entryDate = entryDateString;

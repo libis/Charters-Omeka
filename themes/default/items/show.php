@@ -121,6 +121,20 @@
                   <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Charter Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
               </div>
               <?php endif; ?>
+
+              <?php
+                $timeline = get_db()->getTable('NeatlineTime_Timeline')->findby(array('id' => 1));
+                //$db = get_db();
+                $time_items = $timeline[0]->getItems();
+
+                foreach($time_items as $time_item):
+                  if($time_item->id == get_current_record('item')->id):
+                    $hashlink = 'event-'.str_replace(' ','-',trim(strtolower(strip_tags(metadata('item', array('Dublin Core', 'Title'))))));
+                    $hashlink = str_replace(array('.', ','), "", $hashlink);
+                    echo "<i class='material-icons'>timeline</i><a href='".url("/")."/neatline-time/timelines/show/1#".$hashlink."'>Bekijk het object op de tijdslijn</a>";
+                   endif;
+                endforeach;
+              ?>
             </div>
         </div>
 
