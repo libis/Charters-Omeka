@@ -38,6 +38,7 @@ foreach ($items as $item) {
         }
         $event['title'] = $itemTitle;
         $event['link'] = $itemLink;
+        $event['group'] =  metadata($item,'item_type_name');
         $event['classname'] = neatlinetime_item_class($item);
         if ($fileUrl) {
             $event['image'] = $fileUrl;

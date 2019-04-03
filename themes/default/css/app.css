@@ -4742,6 +4742,10 @@ footer .copyright {
   display: none;
 }
 
+.tl-timeline .tl-headline-title {
+  display: block;
+}
+
 .tl-timeline h2 {
   text-align: left;
   border-bottom: none;

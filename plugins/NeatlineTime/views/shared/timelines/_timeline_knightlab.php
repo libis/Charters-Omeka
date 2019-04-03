@@ -34,6 +34,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
                   "month": startDate[1],
                   "day": startDate[2]
               },
+              "group": data.events[i].group
             };
 
             // If the item has a description, include it
