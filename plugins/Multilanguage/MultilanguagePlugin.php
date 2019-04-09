@@ -429,60 +429,7 @@ CREATE TABLE IF NOT EXISTS $db->MultilanguageRelatedRecord (
                 // Get the locale from the browser.
                 // TODO Get the locale from the browser: to be simplified.
                 if (empty($newLocale)) {
-                    $defaultCode = $this->getDefaultLocaleCode();
-                    $codes = $enabledLocales;
-                    //dump the site's default code to the end as a fallback
-                    $codes[] = $defaultCode;
-                    $browserCodes = array_keys(Zend_Locale::getBrowser());
-                    $match = false;
-                    foreach ($browserCodes as $browserCode) {
-                        if (in_array($browserCode, $codes)) {
-                            $newLocale = $browserCode;
-                            $match = true;
-                            break;
-                        }
-                    }
-                    if (!$match) {
-                        // Failed to find browserCode in our language codes.
-                        // Try to match a two character code and set it to
-                        // the closest equivalent if available.
-                        $shortcodes = array();
-                        foreach ($codes as $c) {
-                            $shortcodes[] = substr($c, 0, 2);
-                        }
-                        foreach ($browserCodes as $bcode) {
-                            if (in_array($bcode, $shortcodes)) {
-                                $lenCodes = count($codes);
-                                for ($i = 0; $i < $lenCodes; $i++) {
-                                    if (strcmp($bcode, $shortcodes[$i]) == 0) {
-                                        $newLocale = $codes[$i];
-                                        break 2;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // From plugin Locale Switcher.
-                    if (empty($newLocale)) {
-                        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-                            $languages = array_map(function($l) {
-                                list($lang, $q) = array_pad(explode(';', $l), 2, null);
-                                return str_replace('-', '_', trim($lang));
-                            }, explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']));
-
-                            foreach ($languages as $language) {
-                                if (in_array($language, $enabledLocales)) {
-                                    $newLocale = $language;
-                                    break;
-                                }
-                            }
-                        }
-
-                        if (empty($newLocale)) {
-                            $newLocale = $defaultCode;
-                        }
-                    }
+                    $newLocale = 'nl_BE';
                 }
             }
         }
