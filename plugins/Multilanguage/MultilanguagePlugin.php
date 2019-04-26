@@ -429,7 +429,7 @@ CREATE TABLE IF NOT EXISTS $db->MultilanguageRelatedRecord (
                 // Get the locale from the browser.
                 // TODO Get the locale from the browser: to be simplified.
                 if (empty($newLocale)) {
-                    $newLocale = 'nl_BE';
+                    $newLocale = 'en';
                 }
             }
         }
