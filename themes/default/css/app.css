@@ -2425,7 +2425,7 @@ p.ui-dropdown-list-trigger {
   display: flex;
   cursor: pointer;
   padding: 0 0 0 0;
-  color: rgba(0, 64, 122, 0.8);
+  color: rgba(106, 37, 65, 0.8);
   font-weight: 300;
   font-size: 0.8rem;
   margin: 0;
@@ -2848,7 +2848,7 @@ p.ui-dropdown-list-trigger {
 
 .item-section .metadata #collection p {
   font-weight: 100;
-  color: #00407a;
+  color: #6A2541;
 }
 
 .item-section .metadata #collection p a {
@@ -2909,7 +2909,7 @@ p.ui-dropdown-list-trigger {
 /* main: app.scss */
 .solr-section-search {
   display: none;
-  background: #00407a;
+  background: #6A2541;
   color: white;
 }
 
@@ -2985,11 +2985,11 @@ p.ui-dropdown-list-trigger {
   font-size: 0.7rem;
   text-transform: uppercase;
   line-height: 1.2rem;
-  color: #00407a;
+  color: #6A2541;
 }
 
 .solr-section-applied #solr-applied-facets ul li .applied-name {
-  border: 1px solid #00407a;
+  border: 1px solid #6A2541;
   padding: 0.5rem 0.5rem;
   display: inline;
   border-radius: 3px 0 0 3px;
@@ -3000,15 +3000,15 @@ p.ui-dropdown-list-trigger {
 }
 
 .solr-section-applied #solr-applied-facets ul li .applied-button {
-  background: #00407a;
-  border: 1px solid #00407a;
+  background: #6A2541;
+  border: 1px solid #6A2541;
   display: inline;
   padding: 0.5rem 0.3rem;
   border-radius: 0 3px 3px 0;
 }
 
 .solr-section-applied #solr-applied-facets ul li .applied-button:hover {
-  background: #00407a;
+  background: #6A2541;
 }
 
 @media (max-width: 768px) {
@@ -3024,7 +3024,7 @@ p.ui-dropdown-list-trigger {
 }
 
 .solr-section-applied #solr-applied-facets ul li a:hover {
-  background: #00407a;
+  background: #6A2541;
 }
 
 .solr-section-applied #solr-applied-facets ul li a i {
@@ -3059,7 +3059,7 @@ p.ui-dropdown-list-trigger {
 }
 
 .solr-section-results h2 a {
-  border-bottom: 2px solid #00407a;
+  border-bottom: 2px solid #6A2541;
 }
 
 .solr-section-results .result {
@@ -3315,7 +3315,7 @@ header {
 }
 
 .btn:hover {
-  color: #00407a;
+  color: #6a2541;
 }
 
 i {
@@ -3326,7 +3326,7 @@ i {
 .tags a {
   font-size: 0.7rem;
   color: white;
-  background: #00407a;
+  background: #6A2541;
   border-radius: 2px;
   margin-right: 2px;
   margin-bottom: 5px;
@@ -3340,7 +3340,7 @@ i {
 .tags a:hover {
   background: white;
   box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.08);
-  color: #00407a;
+  color: #6A2541;
 }
 
 .tags li {
@@ -3395,7 +3395,7 @@ i {
   display: inline-block;
   text-transform: uppercase;
   font-family: 'Barlow', sans-serif;
-  text-shadow: 0px -1px #00407a;
+  text-shadow: 0px -1px #6A2541;
 }
 
 .navbar .brand span {
@@ -3418,7 +3418,7 @@ i {
   .navbar .navbar-nav {
     padding: 0.5rem 1rem;
     width: 100%;
-    background: rgba(0, 64, 122, 0.1);
+    background: rgba(106, 37, 65, 0.1);
     text-align: center;
   }
 }
@@ -3497,7 +3497,7 @@ i {
 
 .slide-nav .nav li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(0, 64, 122, 0.2);
+  border-bottom: 1px solid rgba(106, 37, 65, 0.2);
 }
 
 .slide-nav .nav li:last-of-type {
@@ -3508,88 +3508,107 @@ i {
   display: flex;
 }
 
-/*.hero-section{
-  background: url('../images/bg.jpeg') no-repeat;
+.hero {
+  background: url("../images/bg.jpeg") no-repeat;
   background-size: cover;
   background-position: 100% 15%;
 }
 
 .jumbotron {
-    display: none;
-    //padding-top:10rem;
-    //background:rgba(0,0,0,0.12);
+  background-image: linear-gradient(to bottom right, rgba(106, 37, 65, 0), rgba(106, 37, 65, 0.4));
+}
 
-    .intro{
-        margin:6rem 0rem 2rem 0rem;
-        color: white;
-        text-align: right;
-        //background: rgba($brand-primary,0.2);
-        @include breakpoint(xs) {
-            margin:4rem 0rem 2rem 0rem;
-        }
+.jumbotron .box {
+  align-items: center;
+}
 
-        h2{
-          margin-bottom:0.6rem;
-          font-weight: 900;
-          font-size: 3.5rem;
-          color:white;
-          font-family: $serif;
+.jumbotron .intro {
+  padding: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-right: 1px solid white;
+  color: white;
+  text-align: right;
+}
 
-          @include breakpoint(xs) {
-              font-size: 2.5rem;
-          }
-        }
+@media (max-width: 768px) {
+  .jumbotron .intro {
+    padding: 2rem;
+    border: none;
+    text-align: left;
+  }
+}
 
-        p{
-          font-size: 1.2rem;
-          font-weight: 500;
-          font-family: $sans;
-          text-shadow: none;
-          line-height: 1.4;
-        }
+.jumbotron .intro h2 {
+  margin-bottom: 0.6rem;
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
 
-        i{
-          vertical-align: text-bottom;
-        }
+@media (max-width: 462px) {
+  .jumbotron .intro h2 {
+    font-size: 2.5rem;
+  }
+}
 
-        .more{
-          font-size: 0.7rem;
-          margin-top: 2rem;
-          margin-bottom:0;
-          font-family: $sans;
+.jumbotron .intro p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  text-shadow: none;
+  line-height: 1.4;
+}
 
-          a{
-            color: white;
-            border-radius: 5px;
-            margin-left:6px;
-            text-transform: uppercase;
-            font-weight:900;
-            background: $brand-primary;
-            padding:0.5rem 0.5rem;
-          }
-        }
-    }
+.jumbotron .intro i {
+  vertical-align: text-bottom;
+}
 
-    .logos{
-      width: 100%;
-      text-align: right;
-      margin-bottom: 2rem;
+.jumbotron .intro .more {
+  font-size: 0.7rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-family: "Lato", sans-serif;
+}
 
-      a{
-        vertical-align: top;
+.jumbotron .intro .more a {
+  color: white;
+  border-radius: 5px;
+  margin-left: 6px;
+  text-transform: uppercase;
+  font-weight: 900;
+  background: #6A2541;
+  padding: 0.5rem 0.5rem;
+}
 
-        &:hover{
-          background: none;
-        }
-      }
+.jumbotron .logos {
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  text-align: left;
+}
 
-      img{
-        height:55px;
-        width: auto;
-        margin-left: 0.5rem;
-      }
-    }
-}*/
+@media (max-width: 768px) {
+  .jumbotron .logos {
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+  }
+}
+
+.jumbotron .logos a {
+  vertical-align: top;
+}
+
+.jumbotron .logos a:hover {
+  background: none;
+}
+
+.jumbotron .logos img {
+  height: 150px;
+  width: auto;
+}
+
 .carousel-section h2, .news h2, .exhibit-section h2, .timeline-section h2 {
   font-size: 1.3rem;
   font-weight: 500;
@@ -3620,7 +3639,7 @@ i {
 .carousel-section {
   padding: 3rem 0 3rem 0;
   background: #444;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .carousel-section h2 {
@@ -3729,11 +3748,12 @@ i {
 
 .owl-carousel .center .inner {
   opacity: 1 !important;
+  background: white;
   width: 90%;
   display: block;
   line-height: 1.5;
   font-size: 0.9rem;
-  min-height: 3rem;
+  padding: 0.5rem;
   z-index: 1000;
   text-align: left;
   position: absolute;
@@ -3749,13 +3769,10 @@ i {
 
 .owl-carousel .center .inner a {
   font-weight: 900;
-  padding: 0.5rem;
   color: #333;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  background: white;
-  border-left: 2px solid #eee;
 }
 
 .owl-carousel .center .inner .credits {
@@ -3876,13 +3893,13 @@ section.news .spotlight img {
 }
 
 .breadcrumbs #simple-pages-breadcrumbs a {
-  color: #00407a;
+  color: #6A2541;
 }
 
 .item-section .image-section {
   position: relative;
   padding: 3rem 0;
-  background: rgba(0, 64, 122, 0.05);
+  background: rgba(106, 37, 65, 0.05);
 }
 
 .item-section .image-section .image {
@@ -3910,7 +3927,7 @@ section.news .spotlight img {
   font-weight: 900;
   font-style: italic;
   color: white;
-  background: #00407a;
+  background: #6A2541;
   border-radius: 10px;
   overflow: hidden;
   position: absolute;
@@ -3928,7 +3945,7 @@ section.news .spotlight img {
   font-weight: 700;
   margin-bottom: 1rem;
   font-size: 2.4rem;
-  color: rgba(0, 64, 122, 0.9);
+  color: rgba(106, 37, 65, 0.9);
   font-family: "Lato", sans-serif;
 }
 
@@ -3954,7 +3971,7 @@ section.news .spotlight img {
 
 .item-section .metadata-section .metadata-bg {
   padding: 2rem;
-  background: rgba(0, 64, 122, 0.05);
+  background: rgba(106, 37, 65, 0.05);
   margin-bottom: 2rem;
   max-width: 800px;
 }
@@ -4003,7 +4020,7 @@ section.news .spotlight img {
 }
 
 .item-section .metadata-section .element .element-text a {
-  border-bottom: 1px solid #00407a;
+  border-bottom: 1px solid #6A2541;
 }
 
 .item-section .metadata-section .element .element-text a:hover {
@@ -4111,7 +4128,7 @@ section.news .spotlight img {
 
 .item-section .highlight .text .item .sub-metadata .more-info a {
   font-family: "Lato", sans-serif;
-  border-bottom: 2px solid #00407a;
+  border-bottom: 2px solid #6A2541;
 }
 
 .item-section .highlight .text .item:last-of-type {
@@ -4199,7 +4216,7 @@ section.news .spotlight img {
 .content-section .intro .tags a,
 .exhibit-show-section .intro .tags a,
 .simple-page-section .intro .tags a {
-  color: #00407a;
+  color: #6A2541;
   background: white;
 }
 
@@ -4302,7 +4319,7 @@ section.news .spotlight img {
 .content-section .content .shortcode,
 .exhibit-show-section .content .shortcode,
 .simple-page-section .content .shortcode {
-  border-bottom: 1px solid rgba(0, 64, 122, 0.5);
+  border-bottom: 1px solid rgba(106, 37, 65, 0.5);
   padding: 1rem;
   background: white;
   margin-bottom: 1.5rem;
@@ -4454,7 +4471,7 @@ section.news .spotlight img {
 
 .exhibit-section .summary-text .start a {
   font-family: "Lato", sans-serif;
-  border-bottom: 2px solid #00407a;
+  border-bottom: 2px solid #6a2541;
 }
 
 .exhibit-section .summary-text .start a::after {
@@ -4671,11 +4688,11 @@ footer #footer-text .footer-brand ul li {
 
 footer #footer-text .footer-brand ul li a {
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(0, 64, 122, 0.7);
+  border-bottom: 1px solid rgba(106, 37, 65, 0.7);
 }
 
 footer #footer-text .footer-brand ul li a:hover {
-  background: rgba(0, 64, 122, 0.1);
+  background: rgba(106, 37, 65, 0.1);
 }
 
 footer img {
@@ -4755,20 +4772,19 @@ footer .copyright {
 }
 
 .tl-timeline a {
-  color: #00407a;
+  color: #6A2541;
 }
 
 .tl-timeline a:hover {
   text-decoration: underline;
-  color: #00407a;
+  color: #6A2541;
 }
 
 .timeline-teaser {
-  background: #00407a;
-  background: url("../images/timelinebg.jpg") no-repeat;
+  background: #6A2541;
+  background: url("../images/timelinebg2.png") no-repeat;
   background-size: cover;
   background-position: 100% 100%;
-  padding: 2rem;
 }
 
 .timeline-teaser h2 {
@@ -4781,7 +4797,7 @@ footer .copyright {
 }
 
 .timeline-teaser .teaser-text {
-  background: #00407a;
+  background: #6A2541;
   margin-top: -4rem;
   padding: 2rem 2rem 2rem 2rem;
   margin-bottom: 2rem;
@@ -4798,22 +4814,33 @@ footer .copyright {
 }
 
 .timeline-link {
-  margin-bottom: 4rem;
+  padding-top: 13rem;
+  width: 100%;
+  padding-bottom: 3rem;
   text-align: right;
 }
 
+.timeline-link hr {
+  border-color: white;
+}
+
 .timeline-link a {
+  border-left: 2px solid white;
   color: #333;
   font-weight: bold;
-  background: white;
-  padding: 0.3rem 0.1rem 0.35rem 0.35rem;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
   text-transform: uppercase;
-  color: #00407a;
+  color: white;
+  background: #6A2541;
 }
 
 .timeline-link i {
   vertical-align: top;
-  line-height: 0.9;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
 
 #timeline-1 {

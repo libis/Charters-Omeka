@@ -1,4 +1,19 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
+<section class="hero">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row box">
+        <div class="col-sm-12 offset-md-3 col-md-7 intro">
+
+            <?php echo libis_get_simple_page_content("homepage-info");?>
+
+        </div>
+        <div class="col-sm-12 col-md-2 logos">
+            <a href="http://kuleuven.be"><img src="<?php echo img("sedes_w.png");?>"></a>
+        </div>
+      </div>
+  </div>
+</section>
 <section class="carousel-section">
     <div class='container'>
       <div class='carousel'>
@@ -27,22 +42,25 @@
   </div>
 </section>
 <section class="timeline-section">
+
+
   <div class="container">
+    <h2><?php echo __('Timeline');?></h2>
     <div class="timeline-teaser">
-    <div class="row">
-      <div class="col-12 col-md-6">
+      <!--<div class="col-12 col-md-6">
         <div class="teaser-text">
           <h2><?php echo __('Timeline');?></h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor nunc, fringilla eu orci at, dictum viverra neque.</p>
           <p>Phasellus elit velit, ullamcorper a vehicula ac, hendrerit in urna.</p>
         </div>
+      </div>-->
+      <div class="timeline-link">
+        <div class="bar">
+          <a href="<?php echo url("neatline-time/timelines/show/1");?>">
+            <?php echo __("Visit the timeline");?><i class="material-icons">keyboard_arrow_right</i>
+          </a>
+        </div>
       </div>
-      <div class="col-md-7 timeline-link">
-        <a href="<?php echo url("neatline-time/timelines/show/1");?>">
-          <?php echo __("Visit the timeline");?><i class="material-icons">keyboard_arrow_right</i>
-        </a>
-      </div>
-    </div>
   </div>
   </div>
 </section>

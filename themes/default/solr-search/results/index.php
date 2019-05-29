@@ -102,27 +102,18 @@
                           if (empty($title)) {
                               $title = '<i>'.__('Untitled').'</i>';
                           }
-                          echo $title;
+                          echo substr($title,0,90);
                           ?>
                         </a>
                       </h3>
 
                       <?php if ($doc->resulttype == 'Item') :?>
-                          <?php $item = get_db()->getTable($doc->model)->find($doc->modelid);?>
-                          <?php if($creator = metadata($item, array('Dublin Core','Creator'))):?>
-                            <div class="text">
-                              <?php echo $creator;?>
-                              <?php if($text = metadata($item, array('Dublin Core','Date'))):?>
-                                <?php echo ", ".$text;?>
-                              <?php endif;?>
-                            </div>
-                          <?php else:?>
-                            <?php if($text = metadata($item, array('Dublin Core','Date'))):?>
-                              <div class="text">
-                                <?php echo $text;?>
-                              </div>
-                            <?php endif;?>
-                          <?php endif;?>
+                        <?php $item = get_db()->getTable($doc->model)->find($doc->modelid);?>
+                        <?php if($text = metadata($item, array('Dublin Core','Date'))):?>
+                          <div class="text">
+                            <?php echo $text;?>
+                          </div>
+                        <?php endif;?>
                       <?php endif;?>
                     </div>
                 </div>
