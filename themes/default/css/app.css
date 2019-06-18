@@ -3615,7 +3615,6 @@ i {
 .carousel-section h2, .news h2, .exhibit-section h2, .timeline-section h2 {
   font-size: 1.3rem;
   font-weight: 500;
-  text-transform: uppercase;
   color: rgba(68, 68, 68, 0.9);
   padding: 0 0 0.6rem 0;
   margin-bottom: 1rem;
