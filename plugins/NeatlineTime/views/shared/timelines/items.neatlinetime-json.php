@@ -18,10 +18,11 @@ foreach ($items as $item) {
     }
     $itemTitle = strip_formatting(neatlinetime_metadata($item, 'item_title', array(), $timeline));
     $itemDescription =  neatlinetime_metadata($item, 'item_description', array('snippet' => '200'), $timeline);
+
     $itemDatesEnd = neatlinetime_metadata($item, 'item_date_end', array('all' => true, 'no_filter' => true), $timeline) ?: array();
     $itemLink = record_url($item);
     $file = get_db()->getTable('File')->findWithImages($item->id, 0);
-    $fileUrl = $file ? metadata($file, 'square_thumbnail_uri') : null;
+    $fileUrl = $file ? metadata($file, 'thumbnail_uri') : null;
     foreach ($itemDates as $key => $itemDate) {
         $event = array();
         if (empty($itemDatesEnd[$key])) {
@@ -44,6 +45,7 @@ foreach ($items as $item) {
             $event['image'] = $fileUrl;
         }
         $event['description'] = $itemDescription;
+        $event['exhibits'] = libis_link_to_related_exhibits_string($item);
         $events[] = $event;
     }
 }

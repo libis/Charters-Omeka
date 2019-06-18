@@ -4,9 +4,7 @@
     <div class="container">
       <div class="row box">
         <div class="col-sm-12 offset-md-3 col-md-7 intro">
-
             <?php echo libis_get_simple_page_content("homepage-info");?>
-
         </div>
         <div class="col-sm-12 col-md-2 logos">
             <a href="http://kuleuven.be"><img src="<?php echo img("sedes_w.png");?>"></a>

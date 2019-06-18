@@ -25,6 +25,12 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
             var startDate = parseDate(data.events[i].start);
 
             // Create the slide object for the record
+            //alert(startDate[0] + " " + startDate[1] + " " + startDate[2])
+            if(startDate[1] == '01' && startDate[2] == '01'){
+              startDate[1] = '';
+              startDate[2] = '';
+            }
+
             var timelineEntry = {
               "text": {
                 "headline": data.events[i].title
@@ -39,14 +45,21 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
 
             // If the item has a description, include it
             if (data.events[i].description) {
-              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description;
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description + data.events[i].exhibits;
             }else{
-              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>";
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].exhibits;
             }
+
+
 
             // If the record has an end date, include it
             if (data.events[i].end) {
               var endDate = parseDate(data.events[i].end);
+
+              if(endDate[1] == '12' && endDate[2] == '31'){
+                endDate[1] = '';
+                endDate[2] = '';
+              }
 
               timelineEntry["end_date"] = {
                 "year": endDate[0],
@@ -82,7 +95,9 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
           var timelineDivID = 'timeline-<?php echo $timeline->id; ?>';
 
           var options = {
-            hash_bookmark: true
+            hash_bookmark: true,
+            slide_padding_lr: 40,
+            zoom_sequence: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
           };
 
           // initialize the timeline instance

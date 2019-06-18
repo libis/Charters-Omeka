@@ -2257,7 +2257,7 @@ html {
 }
 
 .card-columns .card {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 544px) {
@@ -2269,6 +2269,10 @@ html {
     display: inline-block;
     width: 100%;
   }
+}
+
+.card-columns .exhibit-item-caption {
+  margin-bottom: 0 !important;
 }
 
 /* main: app.scss */
@@ -3080,8 +3084,7 @@ p.ui-dropdown-list-trigger {
 
 .solr-section-results .result h3 {
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
   line-height: 1.3;
 }
@@ -4224,8 +4227,7 @@ section.news .spotlight img {
 .exhibit-show-section h3,
 .simple-page-section h3 {
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.6rem;
 }
 
@@ -4425,6 +4427,7 @@ section.news .spotlight img {
 .exhibit-section .tile {
   background: white;
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 .exhibit-section .tile img {
@@ -4850,6 +4853,21 @@ footer .copyright {
 
 .tl-slider-background, .tl-slide-content {
   padding: 1rem;
+}
+
+.tl-slide .in-exhibit {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+.tl-slide .in-exhibit:first-of-type {
+  margin-top: 15px;
+}
+
+.tl-slide .in-exhibit i {
+  font-style: normal;
+  font-size: 1rem;
+  margin-right: 3px;
 }
 
 /*# sourceMappingURL=app.css.map */

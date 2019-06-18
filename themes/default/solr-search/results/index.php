@@ -102,7 +102,7 @@
                           if (empty($title)) {
                               $title = '<i>'.__('Untitled').'</i>';
                           }
-                          echo substr($title,0,90);
+                          echo snippet($title,0,70);
                           ?>
                         </a>
                       </h3>

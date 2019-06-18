@@ -153,6 +153,40 @@ function libis_link_to_related_exhibits($item) {
     }
 }
 
+function libis_link_to_related_exhibits_string($item) {
+
+    $db = get_db();
+    $html = "";
+
+    $select = "
+    SELECT e.* FROM {$db->prefix}exhibits AS e
+    INNER JOIN {$db->prefix}exhibit_pages AS ep on ep.exhibit_id = e.id
+    INNER JOIN {$db->prefix}exhibit_page_blocks AS epb ON epb.page_id = ep.id
+    INNER JOIN {$db->prefix}exhibit_block_attachments AS epba ON epba.block_id = epb.id
+    WHERE epba.item_id = ? group by e.id";
+
+    $exhibits = $db->getTable("Exhibit")->fetchObjects($select,array($item->id));
+
+    if(!empty($exhibits)) {
+        foreach($exhibits as $exhibit) {
+            $tags = tag_string($exhibit,null);
+            $tags = explode(",",$tags);
+            $type = "";
+
+            if(in_array("tentoonstelling",$tags)):
+              $type = "tentoonstelling";
+            elseif(in_array("project",$tags)):
+              $type = "project";
+            else:
+              $type = "bijzonder werk";
+            endif;
+            $html .= '<div class="element in-exhibit"><i class="material-icons">&#xE3B6;</i><a href="'.exhibit_builder_exhibit_uri($exhibit).'">'.__("Related story: ").'<strong>'.$exhibit->title.'</strong></a></div>';
+        }
+    }
+
+    return $html;
+}
+
 function solr_tag_string()
 {
     // Set the tag_delimiter option if no delimiter was passed.
