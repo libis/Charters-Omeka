@@ -3,7 +3,7 @@
   <div class="jumbotron">
     <div class="container">
       <div class="row box">
-        <div class="col-sm-12 offset-md-3 col-md-7 intro">
+        <div class="col-sm-12 col-md-10 offset-lg-3 col-lg-7 intro">
             <?php echo libis_get_simple_page_content("homepage-info");?>
         </div>
         <div class="col-sm-12 col-md-2 logos">
