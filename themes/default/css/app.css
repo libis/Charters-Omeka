@@ -4875,4 +4875,8 @@ footer .copyright {
   margin-right: 3px;
 }
 
+.tl-timemarker-media-container {
+  display: none !important;
+}
+
 /*# sourceMappingURL=app.css.map */
