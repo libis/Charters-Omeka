@@ -121,7 +121,11 @@
                   <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Charter Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
               </div>
               <?php endif; ?>
-
+              <?php if (isset($texts['Charter Item Type Metadata']['Scope ID'])): ?>
+              <div class="element">
+                <i class="material-icons">library_books</i><a target="_blank" href="http://abs.lias.be/Query/detail.aspx?ID=<?php echo $texts['Charter Item Type Metadata']['Scope ID'][0]; ?>"><?php echo __('View with Scope');?></a>
+              </div>
+              <?php endif; ?>
               <?php
                 $timeline = get_db()->getTable('NeatlineTime_Timeline')->findby(array('id' => 1));
                 //$db = get_db();
@@ -129,10 +133,13 @@
 
                 foreach($time_items as $time_item):
                   if($time_item->id == get_current_record('item')->id):
-
-                    $hashlink = 'event-'.str_replace(' ','-',trim(strtolower(preg_replace("/[^A-Za-z0-9 ]/", "",metadata('item', array('Dublin Core', 'Title'))))));
+                    $link = str_replace(' ','-',trim(strtolower(preg_replace("/[^A-Za-z0-9 ]/", "",metadata('item', array('Dublin Core', 'Title'))))));
+                    if(preg_match('/^\d/', $link) === 1){
+                      $link = '_'.$link;
+                    }
+                    $hashlink = 'event-'.$link;
                     //$hashlink = str_replace(array('.', ','), "", $hashlink);
-                    echo "<i class='material-icons'>timeline</i><a href='".url("/")."/neatline-time/timelines/show/1#".$hashlink."'>Bekijk het object op de tijdslijn</a>";
+                    echo "<i class='material-icons'>timeline</i><a href='".url("/")."/neatline-time/timelines/show/1#".$hashlink."'>View on the timeline</a>";
                    endif;
                 endforeach;
               ?>
