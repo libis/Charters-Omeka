@@ -43,6 +43,7 @@ foreach ($items as $item) {
         $event['classname'] = neatlinetime_item_class($item);
         if ($fileUrl) {
             $event['image'] = $fileUrl;
+            $event['caption'] = metadata($item, array('Item Type Medata', 'Caption'));
         }
         $event['description'] = $itemDescription;
         $event['exhibits'] = libis_link_to_related_exhibits_string($item);

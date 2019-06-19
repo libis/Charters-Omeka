@@ -74,7 +74,10 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
             // If a pdf is attached, it does not show it or indicate it.
             // If an mp3 is attached in Files, it does not appear.
             if (data.events[i].image) {
-              timelineEntry["media"] = { "url": data.events[i].image };
+              timelineEntry["media"] = {
+                "caption": data.events[i].caption, 
+                "url": data.events[i].image
+              };
             }
 
             // Add the slide to the events
