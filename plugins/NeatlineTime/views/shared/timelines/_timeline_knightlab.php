@@ -27,7 +27,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
               timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].exhibits;
             }
 
-
+            var timelineEntry = '';
             // Assumes YYYY-MM-DD
             var startDate = parseDate(data.events[i].start);
 
@@ -64,7 +64,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
               }
             }
 
-            var timelineEntry = {
+            timelineEntry = {
               "text": {
                 "headline": data.events[i].title
               },
