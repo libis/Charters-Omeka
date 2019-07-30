@@ -4532,6 +4532,12 @@ section.news .spotlight img {
   margin-bottom: 2rem;
 }
 
+.exhibit-section #exhibit-blocks .exhibit-block i {
+  font-size: inherit !important;
+  vertical-align: inherit !important;
+  font-style: italic !important;
+}
+
 .exhibit-section #exhibit-blocks .exhibit-block .text {
   background: white;
   padding: 2rem;
@@ -4873,6 +4879,10 @@ footer .copyright {
   font-style: normal;
   font-size: 1rem;
   margin-right: 3px;
+}
+
+.tl-media-content img {
+  width: auto !important;
 }
 
 .tl-timemarker-media-container {

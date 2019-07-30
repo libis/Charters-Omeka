@@ -20,15 +20,48 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
           var timelineEvents = new Array();
 
           for (var i = 0; i < data.events.length; i++) {
-            // Parse the date string into Y, M, D
+            // If the item has a description, include it
+            if (data.events[i].description) {
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description + data.events[i].exhibits;
+            }else{
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].exhibits;
+            }
+
+
             // Assumes YYYY-MM-DD
             var startDate = parseDate(data.events[i].start);
 
-            // Create the slide object for the record
-            //alert(startDate[0] + " " + startDate[1] + " " + startDate[2])
-            if(startDate[1] == '01' && startDate[2] == '01'){
-              startDate[1] = '';
-              startDate[2] = '';
+            // If the record has an end date, include it
+            if (data.events[i].end) {
+              var endDate = parseDate(data.events[i].end);
+
+              //if full month
+              if(endDate[2] >= '27' && startDate[2] == '01' && endDate[1] == startDate[1]){
+                endDate[2] = '';
+                startDate[2]= '';
+              }else{
+                //if full year
+                if(startDate[1] == '01' && startDate[2] == '01'){
+                  startDate[1] = '';
+                  startDate[2] = '';
+                }
+                if(endDate[1] == '12' && endDate[2] == '31'){
+                  endDate[1] = '';
+                  endDate[2] = '';
+                }
+              }
+
+              timelineEntry["end_date"] = {
+                "year": endDate[0],
+                "month": endDate[1],
+                "day": endDate[2]
+              };
+            }else{
+              //if full year
+              if(startDate[1] == '01' && startDate[2] == '01'){
+                startDate[1] = '';
+                startDate[2] = '';
+              }
             }
 
             var timelineEntry = {
@@ -43,31 +76,6 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
               "group": data.events[i].group
             };
 
-            // If the item has a description, include it
-            if (data.events[i].description) {
-              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description + data.events[i].exhibits;
-            }else{
-              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].exhibits;
-            }
-
-
-
-            // If the record has an end date, include it
-            if (data.events[i].end) {
-              var endDate = parseDate(data.events[i].end);
-
-              if(endDate[1] == '12' && endDate[2] == '31'){
-                endDate[1] = '';
-                endDate[2] = '';
-              }
-
-              timelineEntry["end_date"] = {
-                "year": endDate[0],
-                "month": endDate[1],
-                "day": endDate[2]
-              };
-            }
-
             // If the record has a file attachment, include that.
             // Limits based on returned JSON:
             // If multiple images are attached to the record, it only shows the first.
@@ -75,7 +83,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
             // If an mp3 is attached in Files, it does not appear.
             if (data.events[i].image) {
               timelineEntry["media"] = {
-                "caption": data.events[i].caption, 
+                "caption": data.events[i].caption,
                 "url": data.events[i].image
               };
             }
