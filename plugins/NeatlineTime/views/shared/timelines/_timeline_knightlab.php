@@ -20,14 +20,11 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
           var timelineEvents = new Array();
 
           for (var i = 0; i < data.events.length; i++) {
-            // If the item has a description, include it
-            if (data.events[i].description) {
-              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description + data.events[i].exhibits;
-            }else{
-              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].exhibits;
-            }
-
             var timelineEntry = '';
+
+
+
+
             // Assumes YYYY-MM-DD
             var startDate = parseDate(data.events[i].start);
 
@@ -75,6 +72,13 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
               },
               "group": data.events[i].group
             };
+
+            // If the item has a description, include it
+            if (data.events[i].description) {
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].description + data.events[i].exhibits;
+            }else{
+              timelineEntry.text["text"] = "<h2><a href=" + data.events[i].link + ">" + data.events[i].title + "</a></h2>" + data.events[i].exhibits;
+            }
 
             // If the record has a file attachment, include that.
             // Limits based on returned JSON:
