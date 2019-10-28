@@ -3518,7 +3518,7 @@ i {
 }
 
 .jumbotron {
-  background-image: linear-gradient(to bottom right, rgba(106, 37, 65, 0), rgba(106, 37, 65, 0.7));
+  background-image: linear-gradient(to bottom right, rgba(106, 37, 65, 0), rgba(106, 37, 65, 0.4));
 }
 
 .jumbotron .box {
@@ -3896,6 +3896,16 @@ section.news .spotlight img {
 
 .breadcrumbs #simple-pages-breadcrumbs a {
   color: #6A2541;
+}
+
+.item-section .caption {
+  max-width: 700px;
+  width: 100%;
+  margin: -1rem auto 2rem auto;
+  background: #eee;
+  color: #666;
+  font-size: 0.9rem;
+  padding: 1rem;
 }
 
 .item-section .image-section {

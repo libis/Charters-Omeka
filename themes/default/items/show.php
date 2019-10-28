@@ -15,7 +15,6 @@
       </div>
       <!-- Content -->
       <div class="row">
-
           <div class="col-sm-3 col-xs-12">
             <?php
               $files = get_current_record('item')->getFiles();
@@ -23,6 +22,7 @@
             ?>
                 <a href="<?php echo $files[0]->getWebPath('fullsize');?>">
                     <img src="<?php echo $files[0]->getWebPath('fullsize');?>" />
+
                 </a>
             <?php endif;?>
           </div>
@@ -47,13 +47,17 @@
           <div id="lightgallery">
             <?php
               $files = get_current_record('item')->getFiles();
-              if($files):
+              foreach($files as $file):
             ?>
-                <a href="<?php echo $files[0]->getWebPath('fullsize');?>">
-                    <img src="<?php echo $files[0]->getWebPath('fullsize');?>" />
+                <a href="<?php echo $file->getWebPath('fullsize');?>">
+                    <img src="<?php echo $file->getWebPath('fullsize');?>" />
                 </a>
-            <?php endif;?>
+            <?php endforeach;?>
           </div>
+
+          <?php if(metadata('item', array('Item Type Metadata', 'Caption'))): ?>
+            <p class="caption"><?php echo metadata('item', array('Item Type Metadata', 'Caption')); ?></p>
+          <?php endif;?>
         </div>
 
         <div class="col-md-12 col-lg-5 col-xl-4">
