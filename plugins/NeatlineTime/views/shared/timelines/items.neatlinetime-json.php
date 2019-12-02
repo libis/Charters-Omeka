@@ -53,8 +53,9 @@ foreach ($items as $item) {
 
 $data = array();
 $data['dateTimeFormat'] = 'iso8601';
-$data['events'] = $events;
 
+$data['events'] = $events;
+//var_dump($final);
 $dataJson = version_compare(phpversion(), '5.4.0', '<')
     ? json_encode($data)
     : json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);

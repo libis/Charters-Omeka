@@ -3518,7 +3518,7 @@ i {
 }
 
 .jumbotron {
-  background-image: linear-gradient(to bottom right, rgba(106, 37, 65, 0), rgba(106, 37, 65, 0.4));
+  background-image: linear-gradient(to bottom right, rgba(102, 102, 102, 0), rgba(102, 102, 102, 0.4));
 }
 
 .jumbotron .box {
@@ -3613,13 +3613,23 @@ i {
 }
 
 .carousel-section h2, .news h2, .exhibit-section h2, .timeline-section h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: rgba(68, 68, 68, 0.9);
+  color: #6A2541;
   padding: 0 0 0.6rem 0;
   margin-bottom: 1rem;
   border-bottom: 1px solid #ededed;
   font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+}
+
+.carousel-section .exhibit-block h2, .news .exhibit-block h2, .exhibit-section .exhibit-block h2, .timeline-section .exhibit-block h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 1.5rem;
 }
 
 .carousel-section .view-all, .carousel-section .more-news, .news .view-all, .news .more-news, .exhibit-section .view-all, .exhibit-section .more-news, .timeline-section .view-all, .timeline-section .more-news {
@@ -4721,7 +4731,7 @@ footer #footer-text .footer-brand ul li a:hover {
 
 footer img {
   width: auto;
-  margin-right: 8px;
+  margin-right: 12px;
   margin-bottom: 0.5rem;
 }
 

@@ -112,6 +112,7 @@ if (empty($timeline)) $timeline = get_current_record('neatline_time_timeline');
           var options = {
             hash_bookmark: true,
             slide_padding_lr: 40,
+            initial_zoom: 5,
             zoom_sequence: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]
           };
 

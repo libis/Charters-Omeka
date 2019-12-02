@@ -62,11 +62,10 @@
   </div>
   </div>
 </section>
-<section class="news">
+<!--<section class="news">
   <div class="container">
       <h2><?php echo __('News');?><span class="view-all"><a href="<?php echo url('news');?>"><?php echo __('More news');?></a></span></h2>
       <div class="row">
-        <!-- spotlight -->
         <div class="col-md-12">
           <div class="row">
             <?php $spotlights = get_records('Item',array("type"=>"News",'sort_field' => 'added', 'sort_dir' => 'd'),3);?>
@@ -93,7 +92,7 @@
         </div>
       </div>
   </div>
-</section>
+</section>-->
 <script>
 jQuery(document).ready(function() {
 

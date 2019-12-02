@@ -4,10 +4,9 @@
                 <?php echo get_theme_option('Footer Text'); ?>
                 <div>
                     <a href="http://kuleuven.be"><img height="60px" src="<?php echo img("KULEUVEN.png");?>"></a>
-                    <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="70px" src="<?php echo img("Logo_baillet.png");?>"></a>
-                    <a href="https://www.kbs-frb.be/"><img height="70px" src="<?php echo img("KBS_logo_NL.png");?>"></a>
-                    <a href="https://en.unesco.org/programme/mow"><img height="60px" src="<?php echo img("Memory-of-the-World.png");?>"></a>
-                    <a href="http://libis.be"><img height="60px" src="<?php echo img("libis_gray.png");?>"></a>
+                    <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="120px" src="<?php echo img("Logo_baillet.png");?>"></a>
+                    <a href="https://www.kbs-frb.be/"><img height="100px" src="<?php echo img("KBS_logo_NL.png");?>"></a>
+                    <a href="https://en.unesco.org/programme/mow"><img height="125px" src="<?php echo img("memory_world.png");?>"></a>
                 </div>
                 <div class="footer-brand">
                   <div class="footer-content">
