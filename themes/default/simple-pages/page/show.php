@@ -26,7 +26,7 @@ echo head(array(
                 ?>
           </div>
         </div>
-        <!--<div class="col-sm-3 col-xs-12 nav"><?php echo simple_nav();?></div>-->
+        <div class="col-sm-3 col-xs-12 nav"><?php echo simple_nav();?></div>
     </div>
   </div>
 </div>

@@ -3480,6 +3480,10 @@ i {
   margin-left: 15px;
 }
 
+.navbar2 .nav li ul {
+  display: none;
+}
+
 @media (max-width: 992px) {
   .navbar2 {
     display: none !important;

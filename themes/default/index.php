@@ -19,8 +19,10 @@
       <div class="owl-carousel">
         <?php $records = get_records('Exhibit',array('sort_field' => 'added', 'sort_dir' => 'd'),10);?>
         <?php foreach($records as $record):?>
+          <?php $file = get_record_by_id('File',$record->cover_image_file_id);?>
+          <?php if($file):?>
           <div class="item">
-            <?php $file = get_record_by_id('File',$record->cover_image_file_id);?>
+
             <a href="<?php echo record_url($record);?>"><img src="<?php echo $file->getWebPath("square_thumbnail");?>"/></a>
             <div class="inner">
               <a href="<?php echo record_url($record);?>"><?php echo metadata($record, 'Title');?></a>
@@ -34,6 +36,7 @@
               ?>
             </div>
           </div>
+          <?php endif;?>
         <?php endforeach;?>
       </div>
     </div>
