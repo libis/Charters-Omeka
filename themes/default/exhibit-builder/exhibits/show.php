@@ -39,6 +39,30 @@ echo head(array(
 
         <div id="exhibit-blocks">
           <?php exhibit_builder_render_exhibit_page(); ?>
+
+
+          <div class="exhibit-block layout-text">
+            <div class="text">
+              <h3><strong>Featured in this story</strong></h3>
+              <ul style="margin-left:15px;list-style:circle">
+                <?php
+                  $page = get_current_record('exhibit_page',false);
+                  $a= $page->getAllAttachments();
+                  $items = array();
+                  foreach($a as $at):
+                    //var_dump($at);
+                    $item = $at->getItem();
+                    $items[metadata($item, array('Dublin Core', 'Title'))] = record_url($item);
+                  endforeach;
+
+                  foreach($items as $title=>$link):
+                    echo '<li><a target="_blank" href="'.$link.'">'.$title.'</a></li>';
+                  endforeach;
+                ?>
+              </ul>
+
+            </div>
+          </div>
         </div>
 
         <!--<?php if ($prevLink = exhibit_builder_link_to_previous_page('<i class="material-icons">&#xE314;</i>')): ?>
