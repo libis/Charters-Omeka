@@ -3630,6 +3630,12 @@ i {
   font-family: "Lato", sans-serif;
 }
 
+@media (max-width: 768px) {
+  .carousel-section h2, .news h2, .exhibit-section h2, .timeline-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .carousel-section .exhibit-block h2, .news .exhibit-block h2, .exhibit-section .exhibit-block h2, .timeline-section .exhibit-block h2 {
   font-weight: 500;
   font-size: 1.5rem;
@@ -3638,6 +3644,12 @@ i {
   color: #333;
   margin-bottom: 1.5rem;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-section .exhibit-block h2, .news .exhibit-block h2, .exhibit-section .exhibit-block h2, .timeline-section .exhibit-block h2 {
+    font-size: 1.3rem;
+  }
 }
 
 .carousel-section .view-all, .carousel-section .more-news, .news .view-all, .news .more-news, .exhibit-section .view-all, .exhibit-section .more-news, .timeline-section .view-all, .timeline-section .more-news {
@@ -4588,6 +4600,15 @@ section.news .spotlight img {
   font-size: 1.1rem;
   line-height: 1.5;
   color: #444;
+}
+
+@media (max-width: 768px) {
+  .exhibit-section #exhibit-blocks .exhibit-block .text {
+    padding: 1rem;
+  }
+  .exhibit-section #exhibit-blocks .exhibit-block .text p {
+    font-size: 1rem;
+  }
 }
 
 .exhibit-section #exhibit-blocks .exhibit-block .gallery .text {
