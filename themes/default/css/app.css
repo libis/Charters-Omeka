@@ -3243,6 +3243,10 @@ a {
   transition: all 0.2s linear;
 }
 
+em {
+  font-style: italic;
+}
+
 a:hover {
   color: #444;
 }
@@ -4413,6 +4417,19 @@ section.news .spotlight img {
     padding: 1rem;
     margin: 0;
   }
+}
+
+.page .content img {
+  width: auto;
+  height: auto;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.page .content i {
+  font-size: inherit !important;
+  vertical-align: inherit !important;
+  font-style: italic !important;
 }
 
 .browse .content {
