@@ -12,9 +12,11 @@ echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
         </div>-->
         <h2><?php echo $title; ?></h2>
         <?php if(sizeof($exhibits > 0)): ?>
+
         <div class="row">
           <div class="col-12 col-md-9">
             <div class="row">
+
                 <?php foreach ($exhibits as $exhibit): ?>
                   <div class="col-md-4">
                     <div class="tile">
@@ -31,6 +33,7 @@ echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
                   </div>
                 <?php endforeach; ?>
             </div>
+                <?php echo pagination_links(); ?>
           </div>
           <div class="col-md-3">
               <div class="tags">
