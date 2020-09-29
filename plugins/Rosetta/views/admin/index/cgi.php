@@ -7,7 +7,7 @@
         foreach ($list as $key => $rep):
             //var_dump($rep['content']);echo '<br><hr><br>';
             $content = $rep['content'];
-            $code = $red['representation_code'];
+            $code = $rep['representation_code'];
             if($code == 'LOW'):
               echo "<ul>";
               foreach($content as $fl => $file):
@@ -16,7 +16,7 @@
                 </li>";
               endforeach;
               echo '</ul><hr><br>';
-            endif;  
+            endif;
         endforeach;
         //echo $html;
     else:?>
