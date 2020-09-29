@@ -7,13 +7,16 @@
         foreach ($list as $key => $rep):
             //var_dump($rep['content']);echo '<br><hr><br>';
             $content = $rep['content'];
-            echo "<ul>";
-            foreach($content as $fl => $file):
-              //echo $fl."<br>";
-              echo "<li><a target='_blank' href='".$base_url."/".$fl."/stream?quality=low&from_cache=0'>".$file['label']." - ".$file['file_label']."</a><Input type = 'Radio' Name ='pid' value= '".$fl."'>
-              </li>";
-            endforeach;
-            echo '</ul><hr><br>';
+            $code = $red['representation_code'];
+            if($code == 'LOW'):
+              echo "<ul>";
+              foreach($content as $fl => $file):
+                //echo $fl."<br>";
+                echo "<li><a target='_blank' href='".$base_url."/".$fl."/stream?quality=low&from_cache=0'>".$file['label']." - ".$file['file_label']."</a><Input type = 'Radio' Name ='pid' value= '".$fl."'>
+                </li>";
+              endforeach;
+              echo '</ul><hr><br>';
+            endif;  
         endforeach;
         //echo $html;
     else:?>
