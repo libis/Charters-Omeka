@@ -3,10 +3,14 @@
             <div id="footer-text">
                 <?php echo get_theme_option('Footer Text'); ?>
                 <div>
-                    <a href="http://kuleuven.be"><img height="60px" src="<?php echo img("KULEUVEN.png");?>"></a>
-                    <a href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="120px" src="<?php echo img("Logo_baillet.png");?>"></a>
-                    <a href="https://www.kbs-frb.be/"><img height="100px" src="<?php echo img("KBS_logo_NL.png");?>"></a>
-                    <a href="https://en.unesco.org/programme/mow"><img height="125px" src="<?php echo img("memory_world.png");?>"></a>
+                    <a target="_blank" href="http://kuleuven.be"><img height="60px" src="<?php echo img("KULEUVEN.png");?>"></a>
+                    <a target="_blank" href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="120px" src="<?php echo img("Logo_baillet.png");?>"></a>
+                    <a target="_blank" href="https://en.unesco.org/programme/mow"><img height="125px" src="<?php echo img("memory_world.png");?>"></a>
+                </div>
+                <div>
+                    <a target="_blank" href="https://theo.kuleuven.be/apps/press/bookheritagelab/about/"><img height="60px" src="<?php echo img("TitleBHL.png");?>"></a>
+                    <a target="_blank" href="http://www.illuminare.be/"><img height="80px" src="<?php echo img("illuminare.png");?>"></a>
+                    <a target="_blank" href="https://libis.be"><img height="60px" src="<?php echo img("libis_gray.png");?>"></a>
                 </div>
                 <div class="footer-brand">
                   <div class="footer-content">
