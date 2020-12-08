@@ -15,28 +15,31 @@
 )); ?>
 
 <div class="exhibit-section  simple-page-section ">
+  <div class="container simple-page-container">
 <div id="primary">
 
   <?php echo flash(); ?>
   <h2><?php echo __('Neatline | Browse Exhibits'); ?></h2>
+
 
   <?php if (nl_exhibitsHaveBeenCreated()): ?>
 
     <div class="pagination"><?php echo pagination_links(); ?></div>
 
       <?php foreach (loop('NeatlineExhibit') as $e): ?>
-        <h2>
+        <h3>
           <?php echo nl_getExhibitLink(
             $e, 'show', nl_getExhibitField('title'),
             array('class' => 'neatline'), true
           );?>
-        </h2>
+        </h3>
       <?php endforeach; ?>
 
     <div class="pagination"><?php echo pagination_links(); ?></div>
 
   <?php endif; ?>
 
+</div>
 </div>
 </div>
 <?php echo foot(); ?>
