@@ -56,7 +56,7 @@ echo head(array(
                   endforeach;
 
                   foreach($items as $title=>$link):
-                    echo '<li><a target="_blank" href="'.$link.'">'.$title.'</a></li>';
+                    echo '<li><a target="_blank" href="'.$link.'">'.strip_tags($title).'</a></li>';
                   endforeach;
                 ?>
               </ul>
