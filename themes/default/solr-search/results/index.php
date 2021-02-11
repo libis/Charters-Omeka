@@ -80,7 +80,7 @@
                       <?php if (metadata($item, 'has files')): ?>
                           <div class="card-image">
                             <?php echo link_to_item(
-                                item_image('square', array('alt' => $doc->title), 0, $item),
+                                item_image('square_thumbnail', array('alt' => $doc->title), 0, $item),
                                 array(),
                                 'show',
                                 $item
@@ -93,7 +93,7 @@
                   <!-- Record URL. -->
                   <?php $url = SolrSearch_Helpers_View::getDocumentUrl($doc); ?>
 
-                    <div class="card-body">
+                    <div class="card-body" style="height:140px;">
                       <!-- Title. -->
                       <h3>
                         <a href="<?php echo $url; ?>" class="result-title">
