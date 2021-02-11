@@ -80,7 +80,7 @@
                       <?php if (metadata($item, 'has files')): ?>
                           <div class="card-image">
                             <?php echo link_to_item(
-                                item_image('thumbnail', array('alt' => $doc->title), 0, $item),
+                                item_image('square', array('alt' => $doc->title), 0, $item),
                                 array(),
                                 'show',
                                 $item
