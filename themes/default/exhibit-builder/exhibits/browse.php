@@ -16,7 +16,7 @@ echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
 
         <div class="row">
           <div class="col-12 col-md-9">
-            <div style="max-width:800px;margin-bottom:1rem;">
+            <div style="margin-bottom:1.5rem;padding: 1.5rem 1.5rem 0.5rem 1.5rem;background:white;">
               <?php echo libis_get_simple_page_content('stories-intro');?>
             </div>
             <div class="row">
