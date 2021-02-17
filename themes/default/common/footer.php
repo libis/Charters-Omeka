@@ -7,11 +7,11 @@
                     <a target="_blank" href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="120px" src="<?php echo img("Logo_baillet.png");?>"></a>
                     <a target="_blank" href="https://en.unesco.org/programme/mow"><img height="125px" src="<?php echo img("memory_world.png");?>"></a>
                 </div>
-                <div>
+                <!--<div>
                     <a target="_blank" href="https://theo.kuleuven.be/apps/press/bookheritagelab/about/"><img height="60px" src="<?php echo img("TitleBHL.png");?>"></a>
                     <a target="_blank" href="http://www.illuminare.be/"><img height="80px" src="<?php echo img("illuminare.png");?>"></a>
                     <a target="_blank" href="https://libis.be"><img height="60px" src="<?php echo img("libis_gray.png");?>"></a>
-                </div>
+                </div>-->
                 <div class="footer-brand">
                   <div class="footer-content">
                     <!--<p><a class="footer-logo" href="<?php echo url("/");?>">digital<span>Husserl</span></a> Straatstraat 22 | 3000 Leuven | +3216222222</p>-->
