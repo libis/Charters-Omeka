@@ -11,13 +11,14 @@ echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
             </p>
         </div>-->
         <h2><?php echo $title; ?></h2>
-        <div style="max-width:800px;">
-          <?php echo libis_get_simple_page_content('stories-intro');?>
-        </div>
+
         <?php if(sizeof($exhibits > 0)): ?>
 
         <div class="row">
           <div class="col-12 col-md-9">
+            <div style="max-width:800px;margin-bottom:1rem;">
+              <?php echo libis_get_simple_page_content('stories-intro');?>
+            </div>
             <div class="row">
 
                 <?php foreach ($exhibits as $exhibit): ?>
