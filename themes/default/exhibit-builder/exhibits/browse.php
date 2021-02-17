@@ -11,9 +11,9 @@ echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
             </p>
         </div>-->
         <h2><?php echo $title; ?></h2>
-        <div style="max-width:800px;"?>
+        <div style="max-width:800px;">
           <?php echo libis_get_simple_page_content('stories-intro');?>
-        </div>        
+        </div>
         <?php if(sizeof($exhibits > 0)): ?>
 
         <div class="row">
