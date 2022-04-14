@@ -122,12 +122,12 @@
 
               <?php if (isset($texts['Charter Item Type Metadata']['IE nummer'])): ?>
               <div class="element">
-                  <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Charter Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('Bekijk het volledige object');?></a>
+                  <img class="icon-img" src="<?php echo img('teneo_gray.png');?>"><a target="_blank" href="https://resolver.libis.be/<?php echo $texts['Charter Item Type Metadata']['IE nummer'][0]; ?>/representation"><?php echo __('View the images');?></a>
               </div>
               <?php endif; ?>
               <?php if (isset($texts['Charter Item Type Metadata']['Scope ID'])): ?>
               <div class="element">
-                <i class="material-icons">library_books</i><a target="_blank" href="http://abs.lias.be/Query/detail.aspx?ID=<?php echo $texts['Charter Item Type Metadata']['Scope ID'][0]; ?>"><?php echo __('View with Scope');?></a>
+                <i class="material-icons">library_books</i><a target="_blank" href="http://abs.lias.be/Query/detail.aspx?ID=<?php echo $texts['Charter Item Type Metadata']['Scope ID'][0]; ?>"><?php echo __('View the full description');?></a>
               </div>
               <?php endif; ?>
               <?php

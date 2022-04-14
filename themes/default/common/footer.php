@@ -3,25 +3,19 @@
             <div id="footer-text">
                 <?php echo get_theme_option('Footer Text'); ?>
                 <div>
-                    <a target="_blank" href="http://kuleuven.be"><img height="60px" src="<?php echo img("KULEUVEN.png");?>"></a>
-                    <a target="_blank" href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="120px" src="<?php echo img("Logo_baillet.png");?>"></a>
-                    <a target="_blank" href="https://en.unesco.org/programme/mow"><img height="125px" src="<?php echo img("memory_world.png");?>"></a>
+                    <a target="_blank" href="http://kuleuven.be"><img height="50px" src="<?php echo img("KULEUVEN.png");?>"></a>
+                    <a target="_blank" href="http://www.fondsbailletlatour.com/index.cfm?lang=NED&pageID=14"><img height="110px" src="<?php echo img("Logo_baillet.png");?>"></a>
+                    <a target="_blank" href="https://en.unesco.org/programme/mow"><img height="115px" src="<?php echo img("memory_world.png");?>"></a>
                 </div>
-                <!--<div>
-                    <a target="_blank" href="https://theo.kuleuven.be/apps/press/bookheritagelab/about/"><img height="60px" src="<?php echo img("TitleBHL.png");?>"></a>
-                    <a target="_blank" href="http://www.illuminare.be/"><img height="80px" src="<?php echo img("illuminare.png");?>"></a>
-                    <a target="_blank" href="https://libis.be"><img height="60px" src="<?php echo img("libis_gray.png");?>"></a>
-                </div>-->
-                <div class="footer-brand">
+                 <!--<div class="footer-brand">
                   <div class="footer-content">
-                    <!--<p><a class="footer-logo" href="<?php echo url("/");?>">digital<span>Husserl</span></a> Straatstraat 22 | 3000 Leuven | +3216222222</p>-->
                     <ul>
                         <li><a href="">Cookie policy</a></li>
                     </ul>
                   </div>
-                </div>
+                </div>-->
                 <div class="copyright">
-                  © KU Leuven
+                  © KU Leuven, built by <a href="https://libis.be">LIBIS</a>
                 </div>
             </div>
             <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>

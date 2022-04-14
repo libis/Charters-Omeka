@@ -17,10 +17,15 @@
           <div class="solr-top">
             <h1><?php echo __("Search the catalogue");?></h1>
 
+            <?php 
+            $placeholder = "";
+            if(isset($_GET["q"])):
+              $placeholder = strip_tags(htmlspecialchars($_GET["q"]));
+            endif;?>
             <form id="solr-search-form">
               <div class="inputs">
                 <input type="text" title="<?php echo __('Search keywords') ?>" name="q" placeholder="<?php echo __('Search the Collection'); ?>" value="<?php
-                  echo array_key_exists('q', $_GET) ? $_GET['q'] : '';
+                  echo array_key_exists('q', $placeholder) ? $placeholder : '';
                   ?>"
                 />
               </div>
