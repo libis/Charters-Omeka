@@ -39,7 +39,7 @@ echo head(array('title' => $title, 'bodyclass' => 'stories browse'));
             </div>
                 <?php echo pagination_links(); ?>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 tags-section">
               <div class="tags">
                 <?php $tags = get_db()->getTable('Tag')->findBy(array('type'=>'Exhibit'));?>
                 <?php echo tag_cloud($tags, 'exhibits/browse'); ?>

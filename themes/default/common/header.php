@@ -91,10 +91,10 @@
           </div>
            <div class="slide-nav">
              <?php echo public_nav_main(array('role' => 'navigation')) -> setUlClass('nav navbar-nav'); ?>
-             <div class="tags">
+             <?php /*<div class="tags">
                <?php $tags = get_db()->getTable('Tag')->findBy(array('type'=>'Exhibit'));?>
                <?php echo tag_cloud($tags, 'exhibits/browse'); ?>
-             </div>
+             </div><?php */?>
            </div>
          </section><!-- #page-slide -->
          
